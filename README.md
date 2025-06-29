@@ -84,4 +84,4 @@ For each case the device replies with an error packet bearing code **`0xFAFAFA`*
 ---
 
 ## Further Reading
-* **Request for Discussion (RFD)** – detailed design rationale and architecture can be found [📄 here]((https://github.com/bschmisseur/Ethernet_Driver_Simulator/wiki/Request-for-Discussion)).
+* **Request for Discussion (RFD)** – detailed design rationale and architecture can be found [📄 here](https://github.com/bschmisseur/Ethernet_Driver_Simulator/wiki/Request-for-Discussion).
