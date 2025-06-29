@@ -7,7 +7,7 @@
 #
 
 # C++ Project settings
-COMPONENT_NAME = embedded_ethernet_driver
+COMPONENT_NAME = ethernet_driver_simulator
 CXX := g++
 CXXFLAGS := -Wall -Wextra -std=c++17 -Iinclude
 LINKER_FLAGS := -lavformat -lavcodec -lavutil -lswscale -lavdevice
@@ -30,6 +30,7 @@ UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 	MKDIR = mkdir -p
 	DISCLAIMER = 
+	PREFIX_TARGET = ./
 else
 	MKDIR = mkdir.exe
 
@@ -50,6 +51,7 @@ else
 	CXXFLAGS := $(CXXFLAGS) -I$(FFMPEG_DIR)\\include -L$(FFMPEG_DIR)\\lib
 
 	DISCLAIMER = !! To run on Windows please add $(CURRENT_DIR)..\$(FFMPEG_DIR)\bin to your environment path variable !!
+	PREFIX_TARGET =
 endif
 
 # Source and object files
@@ -59,7 +61,7 @@ OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJS_DIR)/%.o)
 .PHONY: all clean run
 
 # Default target
-all: $(EXE_DIR) $(OBJS_DIR) $(TARGET_PATH)
+all: $(EXE_DIR) $(OBJS_DIR) $(TARGET_PATH) dist
 
 ##
 # Main Build Targets
@@ -83,13 +85,17 @@ clean:
 #
 run:
 	@echo $(DISCLAIMER)
-	$(TARGET_PATH)
+	@$(PREFIX_TARGET)$(RELEASE_TARGET)
+
+run_dev: 
+	@echo $(DISCLAIMER)
+	@$(PREFIX_TARGET)$(TARGET_PATH)
 
 ##
 # Distribution Targets
 #
 dist: all $(RELEASE_BIN_DIR)
-	cp $(TARGET_PATH) $(RELEASE_BIN_DIR)
+	cp $(TARGET_PATH) $(RELEASE_TARGET)
 
 ##
 # Directory Creation Targets
