@@ -1,7 +1,7 @@
 ##
 # @file MakeFile
 #
-# @brief Makefile implements targets to run bash commands to build, clean, and test the projects
+# @brief Makefile implements targets to run bash commands to build, clean, and run the project
 #
 # @author Bryce Schmisseur
 #
@@ -10,42 +10,53 @@
 COMPONENT_NAME = embedded_ethernet_driver
 CXX := g++
 CXXFLAGS := -Wall -Wextra -std=c++17 -Iinclude
+LINKER_FLAGS := -lavformat -lavcodec -lavutil -lswscale -lavdevice
 
 # Directory Paths
 SRC_DIR := src
 BUILD_DIR := build
-TEST_DIR := tests
+RELEASE_DIR := release
 WINDOWS_BUILD_DIR = $(BUILD_DIR)/win
 LINUX_BUILD_DIR = $(BUILD_DIR)/lin
 OBJS_DIR = $(LINUX_BUILD_DIR)/objs
 EXE_DIR = $(LINUX_BUILD_DIR)/exe
-
+RELEASE_BIN_DIR = $(RELEASE_DIR)/bin
+FFMPEG_DIR = cots/ffmpeg
+RELEASE_TARGET = $(RELEASE_BIN_DIR)/$(TARGET)
 TARGET := $(COMPONENT_NAME)
 TARGET_PATH = $(EXE_DIR)/$(TARGET)
-TEST_TARGET := $(BUILD_DIR)/test_runner
 
 UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 	MKDIR = mkdir -p
+	DISCLAIMER = 
 else
 	MKDIR = mkdir.exe
+
+	CURRENT_DIR = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
+	CURRENT_DIR := $(subst /,\\,$(CURRENT_DIR))
 	OBJS_DIR := $(WINDOWS_BUILD_DIR)/objs
 	EXE_DIR := $(WINDOWS_BUILD_DIR)/exe
 	BUILD_DIR := $(subst /,\\,$(BUILD_DIR))
 	OBJS_DIR := $(subst /,\\,$(OBJS_DIR))
 	EXE_DIR := $(subst /,\\,$(EXE_DIR))
+	FFMPEG_DIR := $(subst /,\\,$(FFMPEG_DIR))
+	FFMPEG_DIR := $(subst /,\\,$(FFMPEG_DIR))
+	RELEASE_BIN_DIR := $(subst /,\\,$(RELEASE_BIN_DIR))
+	RELEASE_TARGET := $(subst /,\\,$(RELEASE_TARGET)).exe
 	TARGET_PATH := $(subst /,\\,$(TARGET_PATH)).exe
 	TARGET := $(COMPONENT_NAME).exe
+	CXXFLAGS := $(CXXFLAGS) -I$(FFMPEG_DIR)\\include -L$(FFMPEG_DIR)\\lib
+
+	DISCLAIMER = !! To run on Windows please add $(CURRENT_DIR)..\$(FFMPEG_DIR)\bin to your environment path variable !!
 endif
 
 # Source and object files
 SRCS := $(wildcard $(SRC_DIR)/*.cpp)
 OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJS_DIR)/%.o)
 
-TEST_SRCS := $(wildcard $(TEST_DIR)/*.cpp)
-TEST_OBJS := $(patsubst $(TEST_DIR)/%.cpp,$(BUILD_DIR)/%.test.o,$(TEST_SRCS))
-
-.PHONY: all clean test
+.PHONY: all clean run
 
 # Default target
 all: $(EXE_DIR) $(OBJS_DIR) $(TARGET_PATH)
@@ -54,21 +65,31 @@ all: $(EXE_DIR) $(OBJS_DIR) $(TARGET_PATH)
 # Main Build Targets
 #
 $(TARGET_PATH): $(OBJS)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $(LINKER_FLAGS) $^ -o $@
 
 # Compile source files
 $(OBJS_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 ##
-# Unit testing Targets
+# Clean Targets
 #
-test: $(OBJS) $(TEST_OBJS)
-	$(CXX) $(CXXFLAGS) $^ -o $(TEST_TARGET)
-	./$(TEST_TARGET)
+clean:
+	rm -rf $(BUILD_DIR)
+	rm -rf $(RELEASE_DIR)
 
-$(BUILD_DIR)/%.test.o: $(TEST_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+##
+# Run Targets
+#
+run:
+	@echo $(DISCLAIMER)
+	$(TARGET_PATH)
+
+##
+# Distribution Targets
+#
+dist: all $(RELEASE_BIN_DIR)
+	cp $(TARGET_PATH) $(RELEASE_BIN_DIR)
 
 ##
 # Directory Creation Targets
@@ -84,15 +105,8 @@ $(EXE_DIR): $(BUILD_DIR)
 $(OBJS_DIR): $(BUILD_DIR)
 	$(MKDIR) $(OBJS_DIR)
 
+$(RELEASE_BIN_DIR): $(RELEASE_DIR)
+	$(MKDIR) $(RELEASE_BIN_DIR)
 
-##
-# Clean Targets
-#
-clean:
-	rm -rf $(BUILD_DIR)
-
-##
-# Run Targets
-#
-run:
-	$(TARGET_PATH)
+$(RELEASE_DIR):
+	$(MKDIR) $(RELEASE_DIR)
