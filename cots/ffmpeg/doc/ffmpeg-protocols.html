@@ -1,34 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 7.0.1, https://www.gnu.org/software/texinfo/ -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>FFmpeg Protocols Documentation</title>
-
-<meta name="description" content="FFmpeg Protocols Documentation">
-<meta name="keywords" content="FFmpeg Protocols Documentation">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<style type="text/css">
-<!--
-div.example {margin-left: 3.2em}
-ul.mark-bullet {list-style-type: disc}
-ul.toc-numbered-mark {list-style: none}
--->
-</style>
-
-
-</head>
-
-<body lang="en">
+<!-- Created by , GNU Texinfo 7.1 -->
+  <head>
+    <meta charset="utf-8">
+    <title>
+      FFmpeg Protocols Documentation
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      FFmpeg Protocols Documentation
+      </h1>
 
 
 <div class="top-level-extent" id="SEC_Top">
-
 
 <div class="element-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
@@ -106,8 +95,16 @@ ul.toc-numbered-mark {list-style: none}
 </ul>
 </div>
 </div>
+
+<ul class="mini-toc">
+<li><a href="#Description" accesskey="1">Description</a></li>
+<li><a href="#Protocol-Options" accesskey="2">Protocol Options</a></li>
+<li><a href="#Protocols" accesskey="3">Protocols</a></li>
+<li><a href="#See-Also" accesskey="4">See Also</a></li>
+<li><a href="#Authors" accesskey="5">Authors</a></li>
+</ul>
 <div class="chapter-level-extent" id="Description">
-<h2 class="chapter">1 Description</h2>
+<h2 class="chapter"><span>1 Description<a class="copiable-link" href="#Description"> &para;</a></span></h2>
 
 <p>This document describes the input and output protocols provided by the
 libavformat library.
@@ -115,7 +112,7 @@ libavformat library.
 
 </div>
 <div class="chapter-level-extent" id="Protocol-Options">
-<h2 class="chapter">2 Protocol Options</h2>
+<h2 class="chapter"><span>2 Protocol Options<a class="copiable-link" href="#Protocol-Options"> &para;</a></span></h2>
 
 <p>The libavformat library provides some generic global options, which
 can be set on all the protocols. In addition each protocol may support
@@ -140,7 +137,7 @@ protocol (nested protocols) are restricted to a per protocol subset.
 
 </div>
 <div class="chapter-level-extent" id="Protocols">
-<h2 class="chapter">3 Protocols</h2>
+<h2 class="chapter"><span>3 Protocols<a class="copiable-link" href="#Protocols"> &para;</a></span></h2>
 
 <p>Protocols are configured elements in FFmpeg that enable access to
 resources that require specific protocols.
@@ -217,7 +214,7 @@ in microseconds.
 <li><a href="#zmq">zmq</a></li>
 </ul>
 <div class="section-level-extent" id="amqp">
-<h3 class="section">3.1 amqp</h3>
+<h3 class="section"><span>3.1 amqp<a class="copiable-link" href="#amqp"> &para;</a></span></h3>
 
 <p>Advanced Message Queueing Protocol (AMQP) version 0-9-1 is a broker based
 publish-subscribe communication protocol.
@@ -301,7 +298,7 @@ pressure.
 
 </div>
 <div class="section-level-extent" id="async">
-<h3 class="section">3.2 async</h3>
+<h3 class="section"><span>3.2 async<a class="copiable-link" href="#async"> &para;</a></span></h3>
 
 <p>Asynchronous data filling wrapper for input stream.
 </p>
@@ -315,7 +312,7 @@ async:cache:http://host/resource
 
 </div>
 <div class="section-level-extent" id="bluray">
-<h3 class="section">3.3 bluray</h3>
+<h3 class="section"><span>3.3 bluray<a class="copiable-link" href="#bluray"> &para;</a></span></h3>
 
 <p>Read BluRay playlist.
 </p>
@@ -349,7 +346,7 @@ async:cache:http://host/resource
 
 </div>
 <div class="section-level-extent" id="cache">
-<h3 class="section">3.4 cache</h3>
+<h3 class="section"><span>3.4 cache<a class="copiable-link" href="#cache"> &para;</a></span></h3>
 
 <p>Caching wrapper for input stream.
 </p>
@@ -371,7 +368,7 @@ async:cache:http://host/resource
 
 </div>
 <div class="section-level-extent" id="concat">
-<h3 class="section">3.5 concat</h3>
+<h3 class="section"><span>3.5 concat<a class="copiable-link" href="#concat"> &para;</a></span></h3>
 
 <p>Physical concatenation protocol.
 </p>
@@ -399,7 +396,7 @@ many shells.
 </p>
 </div>
 <div class="section-level-extent" id="concatf">
-<h3 class="section">3.6 concatf</h3>
+<h3 class="section"><span>3.6 concatf<a class="copiable-link" href="#concatf"> &para;</a></span></h3>
 
 <p>Physical concatenation protocol using a line break delimited list of
 resources.
@@ -415,7 +412,7 @@ a unique resource.
 <p>where <var class="var">URL</var> is the url containing a line break delimited list of
 resources to be concatenated, each one possibly specifying a distinct
 protocol. Special characters must be escaped with backslash or single
-quotes. See <a data-manual="ffmpeg-utils" href="ffmpeg-utils.html#quoting_005fand_005fescaping">(ffmpeg-utils)the &quot;Quoting and escaping&quot;
+quotes. See <a data-manual="ffmpeg-utils" href="ffmpeg-utils.html#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
 section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>For example to read a sequence of files <samp class="file">split1.mpeg</samp>,
@@ -433,7 +430,7 @@ split3.mpeg
 
 </div>
 <div class="section-level-extent" id="crypto">
-<h3 class="section">3.7 crypto</h3>
+<h3 class="section"><span>3.7 crypto<a class="copiable-link" href="#crypto"> &para;</a></span></h3>
 
 <p>AES-encrypted stream reading protocol.
 </p>
@@ -456,7 +453,7 @@ crypto+<var class="var">URL</var>
 
 </div>
 <div class="section-level-extent" id="data">
-<h3 class="section">3.8 data</h3>
+<h3 class="section"><span>3.8 data<a class="copiable-link" href="#data"> &para;</a></span></h3>
 
 <p>Data in-line in the URI. See <a class="url" href="http://en.wikipedia.org/wiki/Data_URI_scheme">http://en.wikipedia.org/wiki/Data_URI_scheme</a>.
 </p>
@@ -467,7 +464,7 @@ crypto+<var class="var">URL</var>
 
 </div>
 <div class="section-level-extent" id="fd">
-<h3 class="section">3.9 fd</h3>
+<h3 class="section"><span>3.9 fd<a class="copiable-link" href="#fd"> &para;</a></span></h3>
 
 <p>File descriptor access protocol.
 </p>
@@ -498,7 +495,7 @@ time, which is valuable if data transmission is slow.
 
 </div>
 <div class="section-level-extent" id="file">
-<h3 class="section">3.10 file</h3>
+<h3 class="section"><span>3.10 file<a class="copiable-link" href="#file"> &para;</a></span></h3>
 
 <p>File access protocol.
 </p>
@@ -556,7 +553,7 @@ features (e.g. accurate seeking).
 
 </div>
 <div class="section-level-extent" id="ftp">
-<h3 class="section">3.11 ftp</h3>
+<h3 class="section"><span>3.11 ftp<a class="copiable-link" href="#ftp"> &para;</a></span></h3>
 
 <p>FTP (File Transfer Protocol).
 </p>
@@ -605,13 +602,13 @@ operation. ff* tools may produce incomplete content due to server limitations.
 </p>
 </div>
 <div class="section-level-extent" id="gopher">
-<h3 class="section">3.12 gopher</h3>
+<h3 class="section"><span>3.12 gopher<a class="copiable-link" href="#gopher"> &para;</a></span></h3>
 
 <p>Gopher protocol.
 </p>
 </div>
 <div class="section-level-extent" id="gophers">
-<h3 class="section">3.13 gophers</h3>
+<h3 class="section"><span>3.13 gophers<a class="copiable-link" href="#gophers"> &para;</a></span></h3>
 
 <p>Gophers protocol.
 </p>
@@ -619,7 +616,7 @@ operation. ff* tools may produce incomplete content due to server limitations.
 </p>
 </div>
 <div class="section-level-extent" id="hls">
-<h3 class="section">3.14 hls</h3>
+<h3 class="section"><span>3.14 hls<a class="copiable-link" href="#hls"> &para;</a></span></h3>
 
 <p>Read Apple HTTP Live Streaming compliant segmented stream as
 a uniform one. The M3U8 playlists describing the segments can be
@@ -641,7 +638,7 @@ m3u8 files.
 </p>
 </div>
 <div class="section-level-extent" id="http">
-<h3 class="section">3.15 http</h3>
+<h3 class="section"><span>3.15 http<a class="copiable-link" href="#http"> &para;</a></span></h3>
 
 <p>HTTP (Hyper Text Transfer Protocol).
 </p>
@@ -827,7 +824,7 @@ to protect sensitive or valuable information.
 <li><a href="#HTTP-Cookies" accesskey="1">HTTP Cookies</a></li>
 </ul>
 <div class="subsection-level-extent" id="HTTP-Cookies">
-<h4 class="subsection">3.15.1 HTTP Cookies</h4>
+<h4 class="subsection"><span>3.15.1 HTTP Cookies<a class="copiable-link" href="#HTTP-Cookies"> &para;</a></span></h4>
 
 <p>Some HTTP requests will be denied unless cookie values are passed in with the
 request. The <samp class="option">cookies</samp> option allows these cookies to be specified. At
@@ -844,7 +841,7 @@ by a newline.
 </div>
 </div>
 <div class="section-level-extent" id="Icecast">
-<h3 class="section">3.16 Icecast</h3>
+<h3 class="section"><span>3.16 Icecast<a class="copiable-link" href="#Icecast"> &para;</a></span></h3>
 
 <p>Icecast protocol (stream to Icecast servers)
 </p>
@@ -903,7 +900,7 @@ HTTP PUT method but the SOURCE method.
 
 </div>
 <div class="section-level-extent" id="ipfs">
-<h3 class="section">3.17 ipfs</h3>
+<h3 class="section"><span>3.17 ipfs<a class="copiable-link" href="#ipfs"> &para;</a></span></h3>
 
 <p>InterPlanetary File System (IPFS) protocol support. One can access files stored
 on the IPFS network through so-called gateways. These are http(s) endpoints.
@@ -934,13 +931,13 @@ and <code class="code">$HOME/.ipfs/</code>, in that order.
 
 </div>
 <div class="section-level-extent" id="mmst">
-<h3 class="section">3.18 mmst</h3>
+<h3 class="section"><span>3.18 mmst<a class="copiable-link" href="#mmst"> &para;</a></span></h3>
 
 <p>MMS (Microsoft Media Server) protocol over TCP.
 </p>
 </div>
 <div class="section-level-extent" id="mmsh">
-<h3 class="section">3.19 mmsh</h3>
+<h3 class="section"><span>3.19 mmsh<a class="copiable-link" href="#mmsh"> &para;</a></span></h3>
 
 <p>MMS (Microsoft Media Server) protocol over HTTP.
 </p>
@@ -951,7 +948,7 @@ and <code class="code">$HOME/.ipfs/</code>, in that order.
 
 </div>
 <div class="section-level-extent" id="md5">
-<h3 class="section">3.20 md5</h3>
+<h3 class="section"><span>3.20 md5<a class="copiable-link" href="#md5"> &para;</a></span></h3>
 
 <p>MD5 output protocol.
 </p>
@@ -973,7 +970,7 @@ be seekable, so they will fail with the MD5 output protocol.
 </p>
 </div>
 <div class="section-level-extent" id="pipe">
-<h3 class="section">3.21 pipe</h3>
+<h3 class="section"><span>3.21 pipe<a class="copiable-link" href="#pipe"> &para;</a></span></h3>
 
 <p>UNIX pipe access protocol.
 </p>
@@ -1022,7 +1019,7 @@ be seekable, so they will fail with the pipe output protocol.
 </p>
 </div>
 <div class="section-level-extent" id="prompeg">
-<h3 class="section">3.22 prompeg</h3>
+<h3 class="section"><span>3.22 prompeg<a class="copiable-link" href="#prompeg"> &para;</a></span></h3>
 
 <p>Pro-MPEG Code of Practice #3 Release 2 FEC protocol.
 </p>
@@ -1060,7 +1057,7 @@ and <code class="code">port + 4</code> for the row FEC stream.
 
 </div>
 <div class="section-level-extent" id="rist">
-<h3 class="section">3.23 rist</h3>
+<h3 class="section"><span>3.23 rist<a class="copiable-link" href="#rist"> &para;</a></span></h3>
 
 <p>Reliable Internet Streaming Transport protocol
 </p>
@@ -1115,7 +1112,7 @@ Acceptable values are 128 and 256.
 
 </div>
 <div class="section-level-extent" id="rtmp">
-<h3 class="section">3.24 rtmp</h3>
+<h3 class="section"><span>3.24 rtmp<a class="copiable-link" href="#rtmp"> &para;</a></span></h3>
 
 <p>Real-Time Messaging Protocol.
 </p>
@@ -1191,6 +1188,14 @@ FALSE or TRUE, respectively.  Likewise for Objects the data must be 0 or
 be named, by prefixing the type with &rsquo;N&rsquo; and specifying the name before
 the value (i.e. <code class="code">NB:myFlag:1</code>). This option may be used multiple
 times to construct arbitrary AMF sequences.
+</p>
+</dd>
+<dt><samp class="option">rtmp_enhanced_codecs</samp></dt>
+<dd><p>Specify the list of codecs the client advertises to support in an
+enhanced RTMP stream. This option should be set to a comma separated
+list of fourcc values, like <code class="code">hvc1,av01,vp09</code> for multiple codecs
+or <code class="code">hvc1</code> for only one codec. The specified list will be presented
+in the &quot;fourCcLive&quot; property of the Connect Command Message.
 </p>
 </dd>
 <dt><samp class="option">rtmp_flashver</samp></dt>
@@ -1271,7 +1276,7 @@ app names separately:
 
 </div>
 <div class="section-level-extent" id="rtmpe">
-<h3 class="section">3.25 rtmpe</h3>
+<h3 class="section"><span>3.25 rtmpe<a class="copiable-link" href="#rtmpe"> &para;</a></span></h3>
 
 <p>Encrypted Real-Time Messaging Protocol.
 </p>
@@ -1282,7 +1287,7 @@ a pair of RC4 keys.
 </p>
 </div>
 <div class="section-level-extent" id="rtmps">
-<h3 class="section">3.26 rtmps</h3>
+<h3 class="section"><span>3.26 rtmps<a class="copiable-link" href="#rtmps"> &para;</a></span></h3>
 
 <p>Real-Time Messaging Protocol over a secure SSL connection.
 </p>
@@ -1291,7 +1296,7 @@ multimedia content across an encrypted connection.
 </p>
 </div>
 <div class="section-level-extent" id="rtmpt">
-<h3 class="section">3.27 rtmpt</h3>
+<h3 class="section"><span>3.27 rtmpt<a class="copiable-link" href="#rtmpt"> &para;</a></span></h3>
 
 <p>Real-Time Messaging Protocol tunneled through HTTP.
 </p>
@@ -1301,7 +1306,7 @@ firewalls.
 </p>
 </div>
 <div class="section-level-extent" id="rtmpte">
-<h3 class="section">3.28 rtmpte</h3>
+<h3 class="section"><span>3.28 rtmpte<a class="copiable-link" href="#rtmpte"> &para;</a></span></h3>
 
 <p>Encrypted Real-Time Messaging Protocol tunneled through HTTP.
 </p>
@@ -1311,7 +1316,7 @@ firewalls.
 </p>
 </div>
 <div class="section-level-extent" id="rtmpts">
-<h3 class="section">3.29 rtmpts</h3>
+<h3 class="section"><span>3.29 rtmpts<a class="copiable-link" href="#rtmpts"> &para;</a></span></h3>
 
 <p>Real-Time Messaging Protocol tunneled through HTTPS.
 </p>
@@ -1321,7 +1326,7 @@ firewalls.
 </p>
 </div>
 <div class="section-level-extent" id="libsmbclient">
-<h3 class="section">3.30 libsmbclient</h3>
+<h3 class="section"><span>3.30 libsmbclient<a class="copiable-link" href="#libsmbclient"> &para;</a></span></h3>
 
 <p>libsmbclient permits one to manipulate CIFS/SMB network resources.
 </p>
@@ -1355,7 +1360,7 @@ truncating. Default value is 1.
 </p>
 </div>
 <div class="section-level-extent" id="libssh">
-<h3 class="section">3.31 libssh</h3>
+<h3 class="section"><span>3.31 libssh<a class="copiable-link" href="#libssh"> &para;</a></span></h3>
 
 <p>Secure File Transfer Protocol via libssh
 </p>
@@ -1396,7 +1401,7 @@ By default libssh searches for keys in the <samp class="file">~/.ssh/</samp> dir
 
 </div>
 <div class="section-level-extent" id="librtmp-rtmp_002c-rtmpe_002c-rtmps_002c-rtmpt_002c-rtmpte">
-<h3 class="section">3.32 librtmp rtmp, rtmpe, rtmps, rtmpt, rtmpte</h3>
+<h3 class="section"><span>3.32 librtmp rtmp, rtmpe, rtmps, rtmpt, rtmpte<a class="copiable-link" href="#librtmp-rtmp_002c-rtmpe_002c-rtmps_002c-rtmpt_002c-rtmpte"> &para;</a></span></h3>
 
 <p>Real-Time Messaging Protocol and its variants supported through
 librtmp.
@@ -1438,7 +1443,7 @@ meaning as specified for the RTMP native protocol.
 
 </div>
 <div class="section-level-extent" id="rtp">
-<h3 class="section">3.33 rtp</h3>
+<h3 class="section"><span>3.33 rtp<a class="copiable-link" href="#rtp"> &para;</a></span></h3>
 
 <p>Real-time Transport Protocol.
 </p>
@@ -1525,7 +1530,7 @@ set to the local RTP port value plus 1.
 
 </div>
 <div class="section-level-extent" id="rtsp">
-<h3 class="section">3.34 rtsp</h3>
+<h3 class="section"><span>3.34 rtsp<a class="copiable-link" href="#rtsp"> &para;</a></span></h3>
 
 <p>Real-Time Streaming Protocol.
 </p>
@@ -1553,7 +1558,7 @@ line, or set in code via <code class="code">AVOption</code>s or in
 <li><a href="#Examples" accesskey="3">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Muxer">
-<h4 class="subsection">3.34.1 Muxer</h4>
+<h4 class="subsection"><span>3.34.1 Muxer<a class="copiable-link" href="#Muxer"> &para;</a></span></h4>
 <p>The following options are supported.
 </p>
 <dl class="table">
@@ -1620,7 +1625,7 @@ transport protocol.
 
 </div>
 <div class="subsection-level-extent" id="Demuxer">
-<h4 class="subsection">3.34.2 Demuxer</h4>
+<h4 class="subsection"><span>3.34.2 Demuxer<a class="copiable-link" href="#Demuxer"> &para;</a></span></h4>
 <p>The following options are supported.
 </p>
 <dl class="table">
@@ -1744,7 +1749,7 @@ on the fly by pressing <code class="code">v</code> and <code class="code">a</cod
 </p>
 </div>
 <div class="subsection-level-extent" id="Examples">
-<h4 class="subsection">3.34.3 Examples</h4>
+<h4 class="subsection"><span>3.34.3 Examples<a class="copiable-link" href="#Examples"> &para;</a></span></h4>
 
 <p>The following examples all make use of the <code class="command">ffplay</code> and
 <code class="command">ffmpeg</code> tools.
@@ -1774,7 +1779,7 @@ on the fly by pressing <code class="code">v</code> and <code class="code">a</cod
 </div>
 </div>
 <div class="section-level-extent" id="sap">
-<h3 class="section">3.35 sap</h3>
+<h3 class="section"><span>3.35 sap<a class="copiable-link" href="#sap"> &para;</a></span></h3>
 
 <p>Session Announcement Protocol (RFC 2974). This is not technically a
 protocol handler in libavformat, it is a muxer and demuxer.
@@ -1786,7 +1791,7 @@ streams regularly on a separate port.
 <li><a href="#Demuxer-1" accesskey="2">Demuxer</a></li>
 </ul>
 <div class="subsection-level-extent" id="Muxer-1">
-<h4 class="subsection">3.35.1 Muxer</h4>
+<h4 class="subsection"><span>3.35.1 Muxer<a class="copiable-link" href="#Muxer-1"> &para;</a></span></h4>
 
 <p>The syntax for a SAP url given to the muxer is:
 </p><div class="example">
@@ -1848,7 +1853,7 @@ on unique ports.
 
 </div>
 <div class="subsection-level-extent" id="Demuxer-1">
-<h4 class="subsection">3.35.2 Demuxer</h4>
+<h4 class="subsection"><span>3.35.2 Demuxer<a class="copiable-link" href="#Demuxer-1"> &para;</a></span></h4>
 
 <p>The syntax for a SAP url given to the demuxer is:
 </p><div class="example">
@@ -1879,7 +1884,7 @@ Once an announcement is received, it tries to receive that particular stream.
 </div>
 </div>
 <div class="section-level-extent" id="sctp">
-<h3 class="section">3.36 sctp</h3>
+<h3 class="section"><span>3.36 sctp<a class="copiable-link" href="#sctp"> &para;</a></span></h3>
 
 <p>Stream Control Transmission Protocol.
 </p>
@@ -1901,7 +1906,7 @@ Once an announcement is received, it tries to receive that particular stream.
 
 </div>
 <div class="section-level-extent" id="srt">
-<h3 class="section">3.37 srt</h3>
+<h3 class="section"><span>3.37 srt<a class="copiable-link" href="#srt"> &para;</a></span></h3>
 
 <p>Haivision Secure Reliable Transport Protocol via libsrt.
 </p>
@@ -2237,7 +2242,7 @@ mode.
 </p>
 </div>
 <div class="section-level-extent" id="srtp">
-<h3 class="section">3.38 srtp</h3>
+<h3 class="section"><span>3.38 srtp<a class="copiable-link" href="#srtp"> &para;</a></span></h3>
 
 <p>Secure Real-time Transport Protocol.
 </p>
@@ -2267,7 +2272,7 @@ used as master salt.
 
 </div>
 <div class="section-level-extent" id="subfile">
-<h3 class="section">3.39 subfile</h3>
+<h3 class="section"><span>3.39 subfile<a class="copiable-link" href="#subfile"> &para;</a></span></h3>
 
 <p>Virtually extract a segment of a file or another stream.
 The underlying stream must be seekable.
@@ -2303,7 +2308,7 @@ externally and multiplied by 2048):
 
 </div>
 <div class="section-level-extent" id="tee">
-<h3 class="section">3.40 tee</h3>
+<h3 class="section"><span>3.40 tee<a class="copiable-link" href="#tee"> &para;</a></span></h3>
 
 <p>Writes the output to multiple protocols. The individual outputs are separated
 by |
@@ -2314,7 +2319,7 @@ by |
 
 </div>
 <div class="section-level-extent" id="tcp">
-<h3 class="section">3.41 tcp</h3>
+<h3 class="section"><span>3.41 tcp<a class="copiable-link" href="#tcp"> &para;</a></span></h3>
 
 <p>Transmission Control Protocol.
 </p>
@@ -2332,6 +2337,14 @@ by |
 <dt><samp class="option">listen=<var class="var">2|1|0</var></samp></dt>
 <dd><p>Listen for an incoming connection. 0 disables listen, 1 enables listen in
 single client mode, 2 enables listen in multi-client mode. Default value is 0.
+</p>
+</dd>
+<dt><samp class="option">local_addr=<var class="var">addr</var></samp></dt>
+<dd><p>Local IP address of a network interface used for tcp socket connect.
+</p>
+</dd>
+<dt><samp class="option">local_port=<var class="var">port</var></samp></dt>
+<dd><p>Local port used for tcp socket connect.
 </p>
 </dd>
 <dt><samp class="option">timeout=<var class="var">microseconds</var></samp></dt>
@@ -2373,7 +2386,7 @@ ffplay tcp://<var class="var">hostname</var>:<var class="var">port</var>
 
 </div>
 <div class="section-level-extent" id="tls">
-<h3 class="section">3.42 tls</h3>
+<h3 class="section"><span>3.42 tls<a class="copiable-link" href="#tls"> &para;</a></span></h3>
 
 <p>Transport Layer Security (TLS) / Secure Sockets Layer (SSL)
 </p>
@@ -2445,7 +2458,7 @@ The proxy must support the CONNECT method.
 
 </div>
 <div class="section-level-extent" id="udp">
-<h3 class="section">3.43 udp</h3>
+<h3 class="section"><span>3.43 udp<a class="copiable-link" href="#udp"> &para;</a></span></h3>
 
 <p>User Datagram Protocol.
 </p>
@@ -2552,7 +2565,7 @@ a broadcast storm protection.
 <li><a href="#Examples-1" accesskey="1">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Examples-1">
-<h4 class="subsection">3.43.1 Examples</h4>
+<h4 class="subsection"><span>3.43.1 Examples<a class="copiable-link" href="#Examples-1"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Use <code class="command">ffmpeg</code> to stream over UDP to a remote endpoint:
@@ -2575,7 +2588,7 @@ sized UDP packets, using a large input buffer:
 </div>
 </div>
 <div class="section-level-extent" id="unix">
-<h3 class="section">3.44 unix</h3>
+<h3 class="section"><span>3.44 unix<a class="copiable-link" href="#unix"> &para;</a></span></h3>
 
 <p>Unix local socket
 </p>
@@ -2599,7 +2612,7 @@ sized UDP packets, using a large input buffer:
 
 </div>
 <div class="section-level-extent" id="zmq">
-<h3 class="section">3.45 zmq</h3>
+<h3 class="section"><span>3.45 zmq<a class="copiable-link" href="#zmq"> &para;</a></span></h3>
 
 <p>ZeroMQ asynchronous messaging using the libzmq library.
 </p>
@@ -2649,7 +2662,7 @@ decoding errors.
 </div>
 </div>
 <div class="chapter-level-extent" id="See-Also">
-<h2 class="chapter">4 See Also</h2>
+<h2 class="chapter"><span>4 See Also<a class="copiable-link" href="#See-Also"> &para;</a></span></h2>
 
 <p><a class="url" href="ffmpeg.html">ffmpeg</a>, <a class="url" href="ffplay.html">ffplay</a>, <a class="url" href="ffprobe.html">ffprobe</a>,
 <a class="url" href="libavformat.html">libavformat</a>
@@ -2657,14 +2670,14 @@ decoding errors.
 
 </div>
 <div class="chapter-level-extent" id="Authors">
-<h2 class="chapter">5 Authors</h2>
+<h2 class="chapter"><span>5 Authors<a class="copiable-link" href="#Authors"> &para;</a></span></h2>
 
 <p>The FFmpeg developers.
 </p>
 <p>For details about the authorship, see the Git history of the project
-(git://source.ffmpeg.org/ffmpeg), e.g. by typing the command
+(https://git.ffmpeg.org/ffmpeg), e.g. by typing the command
 <code class="command">git log</code> in the FFmpeg source directory, or browsing the
-online repository at <a class="url" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a>.
+online repository at <a class="url" href="https://git.ffmpeg.org/ffmpeg">https://git.ffmpeg.org/ffmpeg</a>.
 </p>
 <p>Maintainers for the specific components are listed in the file
 <samp class="file">MAINTAINERS</samp> in the source code tree.
@@ -2672,8 +2685,9 @@ online repository at <a class="url" href="http://source.ffmpeg.org">http://sourc
 
 </div>
 </div>
-
-
-
-</body>
+      <p style="font-size: small;">
+        This document was generated using <a class="uref" href="https://www.gnu.org/software/texinfo/"><em class="emph">makeinfo</em></a>.
+      </p>
+    </div>
+  </body>
 </html>

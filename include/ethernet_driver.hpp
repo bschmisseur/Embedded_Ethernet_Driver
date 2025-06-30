@@ -19,26 +19,11 @@
 // Project Includes
 #include "error_code.hpp"
 #include "ethernet_frame.hpp"
-#include "host.hpp"
-#include "embedded_device.hpp"
 #include "packet_receiver.hpp"
 
 // Declare namespace
 namespace EthernetDriverSimulation
 {
-    class PacketReceiver {
-        public:
-            /**
-             * @defgroup Public constant declarations
-             * @{
-             */
-            virtual void receiveFrame(const uint8_t* data, size_t size) = 0;
-            virtual ~PacketReceiver() = default;
-            /**
-             * @}
-             */
-    };
-
     class EthernetDriver {
         public:
 

@@ -50,7 +50,7 @@ else
 	TARGET := $(COMPONENT_NAME).exe
 	CXXFLAGS := $(CXXFLAGS) -I$(FFMPEG_DIR)\\include -L$(FFMPEG_DIR)\\lib
 
-	DISCLAIMER = !! To run on Windows please add $(CURRENT_DIR)..\$(FFMPEG_DIR)\bin to your environment path variable !!
+	DISCLAIMER = !! To run on Windows please add $(CURRENT_DIR)\$(FFMPEG_DIR)\bin to your environment path variable !!
 	PREFIX_TARGET =
 endif
 
@@ -61,13 +61,13 @@ OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJS_DIR)/%.o)
 .PHONY: all clean run
 
 # Default target
-all: $(EXE_DIR) $(OBJS_DIR) $(TARGET_PATH) dist
+all: $(EXE_DIR) $(OBJS_DIR) $(TARGET_PATH)
 
 ##
 # Main Build Targets
 #
 $(TARGET_PATH): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(LINKER_FLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ $(LINKER_FLAGS) -o $@
 
 # Compile source files
 $(OBJS_DIR)/%.o: $(SRC_DIR)/%.cpp
@@ -78,7 +78,6 @@ $(OBJS_DIR)/%.o: $(SRC_DIR)/%.cpp
 #
 clean:
 	rm -rf $(BUILD_DIR)
-	rm -rf $(RELEASE_DIR)
 
 ##
 # Run Targets

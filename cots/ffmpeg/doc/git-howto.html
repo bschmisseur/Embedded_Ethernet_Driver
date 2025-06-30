@@ -1,35 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 7.0.1, https://www.gnu.org/software/texinfo/ -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Using Git to develop FFmpeg</title>
-
-<meta name="description" content="Using Git to develop FFmpeg">
-<meta name="keywords" content="Using Git to develop FFmpeg">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<style type="text/css">
-<!--
-div.example {margin-left: 3.2em}
-ul.mark-bullet {list-style-type: disc}
-ul.toc-numbered-mark {list-style: none}
--->
-</style>
-
-
-</head>
-
-<body lang="en">
+<!-- Created by , GNU Texinfo 7.1 -->
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Using Git to develop FFmpeg
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      Using Git to develop FFmpeg
+      </h1>
 
 
 
 <div class="top-level-extent" id="SEC_Top">
-
 
 <div class="element-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
@@ -71,8 +60,18 @@ ul.toc-numbered-mark {list-style: none}
 </ul>
 </div>
 </div>
+
+<ul class="mini-toc">
+<li><a href="#Introduction" accesskey="1">Introduction</a></li>
+<li><a href="#Basics-Usage" accesskey="2">Basics Usage</a></li>
+<li><a href="#Git-configuration" accesskey="3">Git configuration</a></li>
+<li><a href="#FFmpeg-specific" accesskey="4">FFmpeg specific</a></li>
+<li><a href="#gpg-key-generation" accesskey="5">gpg key generation</a></li>
+<li><a href="#Pre_002dpush-checklist" accesskey="6">Pre-push checklist</a></li>
+<li><a href="#Server-Issues" accesskey="7">Server Issues</a></li>
+</ul>
 <div class="chapter-level-extent" id="Introduction">
-<h2 class="chapter">1 Introduction</h2>
+<h2 class="chapter"><span>1 Introduction<a class="copiable-link" href="#Introduction"> &para;</a></span></h2>
 
 <p>This document aims in giving some quick references on a set of useful Git
 commands. You should always use the extensive and detailed documentation
@@ -105,7 +104,7 @@ guidelines to ease the contribution to the project.
 </p>
 </div>
 <div class="chapter-level-extent" id="Basics-Usage">
-<h2 class="chapter">2 Basics Usage</h2>
+<h2 class="chapter"><span>2 Basics Usage<a class="copiable-link" href="#Basics-Usage"> &para;</a></span></h2>
 
 <ul class="mini-toc">
 <li><a href="#Get-Git" accesskey="1">Get Git</a></li>
@@ -123,7 +122,7 @@ guidelines to ease the contribution to the project.
 <li><a href="#Renaming_002fmoving_002fcopying-files-or-contents-of-files">Renaming/moving/copying files or contents of files</a></li>
 </ul>
 <div class="section-level-extent" id="Get-Git">
-<h3 class="section">2.1 Get Git</h3>
+<h3 class="section"><span>2.1 Get Git<a class="copiable-link" href="#Get-Git"> &para;</a></span></h3>
 
 <p>You can get Git from <a class="url" href="http://git-scm.com/">http://git-scm.com/</a>
 Most distribution and operating system provide a package for it.
@@ -131,10 +130,10 @@ Most distribution and operating system provide a package for it.
 
 </div>
 <div class="section-level-extent" id="Cloning-the-source-tree">
-<h3 class="section">2.2 Cloning the source tree</h3>
+<h3 class="section"><span>2.2 Cloning the source tree<a class="copiable-link" href="#Cloning-the-source-tree"> &para;</a></span></h3>
 
 <div class="example">
-<pre class="example-preformatted">git clone git://source.ffmpeg.org/ffmpeg &lt;target&gt;
+<pre class="example-preformatted">git clone https://git.ffmpeg.org/ffmpeg.git &lt;target&gt;
 </pre></div>
 
 <p>This will put the FFmpeg sources into the directory <var class="var">&lt;target&gt;</var>.
@@ -147,7 +146,7 @@ Most distribution and operating system provide a package for it.
 you push back your changes to the remote repository.
 </p>
 <div class="example">
-<pre class="example-preformatted">git clone gil@ffmpeg.org:ffmpeg-web &lt;target&gt;
+<pre class="example-preformatted">git clone git@ffmpeg.org:ffmpeg-web &lt;target&gt;
 </pre></div>
 
 <p>This will put the source of the FFmpeg website into the directory
@@ -172,7 +171,7 @@ achieve this is to run
 
 <a class="anchor" id="Updating-the-source-tree-to-the-latest-revision"></a></div>
 <div class="section-level-extent" id="Updating-the-source-tree-to-the-latest-revision-1">
-<h3 class="section">2.3 Updating the source tree to the latest revision</h3>
+<h3 class="section"><span>2.3 Updating the source tree to the latest revision<a class="copiable-link" href="#Updating-the-source-tree-to-the-latest-revision-1"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git pull (--rebase)
@@ -182,13 +181,12 @@ achieve this is to run
 can be remote. By default the master branch tracks the branch master in
 the remote origin.
 </p>
-<div class="float">
+<div class="warning">
 <p><code class="command">--rebase</code> (see below) is recommended.
-</p><div class="type-number-float"><p><strong class="strong">IMPORTANT
-</strong></p></div></div>
+</p></div>
 </div>
 <div class="section-level-extent" id="Rebasing-your-local-branches">
-<h3 class="section">2.4 Rebasing your local branches</h3>
+<h3 class="section"><span>2.4 Rebasing your local branches<a class="copiable-link" href="#Rebasing-your-local-branches"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git pull --rebase
@@ -201,7 +199,7 @@ FFmpeg&rsquo;s master tree. The master tree will reject pushes with merge commit
 
 </div>
 <div class="section-level-extent" id="Adding_002fremoving-files_002fdirectories">
-<h3 class="section">2.5 Adding/removing files/directories</h3>
+<h3 class="section"><span>2.5 Adding/removing files/directories<a class="copiable-link" href="#Adding_002fremoving-files_002fdirectories"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git add [-A] &lt;filename/dirname&gt;
@@ -215,7 +213,7 @@ Line moves across files are automatically tracked.
 
 </div>
 <div class="section-level-extent" id="Showing-modifications">
-<h3 class="section">2.6 Showing modifications</h3>
+<h3 class="section"><span>2.6 Showing modifications<a class="copiable-link" href="#Showing-modifications"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git diff &lt;filename(s)&gt;
@@ -226,7 +224,7 @@ Line moves across files are automatically tracked.
 
 </div>
 <div class="section-level-extent" id="Inspecting-the-changelog">
-<h3 class="section">2.7 Inspecting the changelog</h3>
+<h3 class="section"><span>2.7 Inspecting the changelog<a class="copiable-link" href="#Inspecting-the-changelog"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git log &lt;filename(s)&gt;
@@ -237,7 +235,7 @@ or the web interface available at <a class="url" href="http://source.ffmpeg.org/
 </p>
 </div>
 <div class="section-level-extent" id="Checking-source-tree-status">
-<h3 class="section">2.8 Checking source tree status</h3>
+<h3 class="section"><span>2.8 Checking source tree status<a class="copiable-link" href="#Checking-source-tree-status"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git status
@@ -249,7 +247,7 @@ of a commit (additions, modifications, deletions, etc.).
 
 </div>
 <div class="section-level-extent" id="Committing">
-<h3 class="section">2.9 Committing</h3>
+<h3 class="section"><span>2.9 Committing<a class="copiable-link" href="#Committing"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git diff --check
@@ -320,7 +318,7 @@ set in your personal configuration file through
 </p>
 </div>
 <div class="section-level-extent" id="Writing-a-commit-message">
-<h3 class="section">2.10 Writing a commit message</h3>
+<h3 class="section"><span>2.10 Writing a commit message<a class="copiable-link" href="#Writing-a-commit-message"> &para;</a></span></h3>
 
 <p>Log messages should be concise but descriptive.
 </p>
@@ -362,7 +360,7 @@ before the patch; line too long or wrapped to the second line.
 </p>
 </div>
 <div class="section-level-extent" id="Preparing-a-patchset">
-<h3 class="section">2.11 Preparing a patchset</h3>
+<h3 class="section"><span>2.11 Preparing a patchset<a class="copiable-link" href="#Preparing-a-patchset"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git format-patch &lt;commit&gt; [-o directory]
@@ -388,7 +386,7 @@ By default the patches are created in the current directory.
 </p>
 </div>
 <div class="section-level-extent" id="Sending-patches-for-review">
-<h3 class="section">2.12 Sending patches for review</h3>
+<h3 class="section"><span>2.12 Sending patches for review<a class="copiable-link" href="#Sending-patches-for-review"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git send-email &lt;commit list|directory&gt;
@@ -403,7 +401,7 @@ package on Debian-based distros).
 
 </div>
 <div class="section-level-extent" id="Renaming_002fmoving_002fcopying-files-or-contents-of-files">
-<h3 class="section">2.13 Renaming/moving/copying files or contents of files</h3>
+<h3 class="section"><span>2.13 Renaming/moving/copying files or contents of files<a class="copiable-link" href="#Renaming_002fmoving_002fcopying-files-or-contents-of-files"> &para;</a></span></h3>
 
 <p>Git automatically tracks such changes, making those normal commits.
 </p>
@@ -417,7 +415,7 @@ git commit
 </div>
 </div>
 <div class="chapter-level-extent" id="Git-configuration">
-<h2 class="chapter">3 Git configuration</h2>
+<h2 class="chapter"><span>3 Git configuration<a class="copiable-link" href="#Git-configuration"> &para;</a></span></h2>
 
 <p>In order to simplify a few workflows, it is advisable to configure both
 your personal Git installation and your local FFmpeg repository.
@@ -427,7 +425,7 @@ your personal Git installation and your local FFmpeg repository.
 <li><a href="#Repository-configuration" accesskey="2">Repository configuration</a></li>
 </ul>
 <div class="section-level-extent" id="Personal-Git-installation">
-<h3 class="section">3.1 Personal Git installation</h3>
+<h3 class="section"><span>3.1 Personal Git installation<a class="copiable-link" href="#Personal-Git-installation"> &para;</a></span></h3>
 
 <p>Add the following to your <samp class="file">~/.gitconfig</samp> to help <code class="command">git send-email</code>
 and <code class="command">git format-patch</code> detect renames:
@@ -439,7 +437,7 @@ and <code class="command">git format-patch</code> detect renames:
 
 </div>
 <div class="section-level-extent" id="Repository-configuration">
-<h3 class="section">3.2 Repository configuration</h3>
+<h3 class="section"><span>3.2 Repository configuration<a class="copiable-link" href="#Repository-configuration"> &para;</a></span></h3>
 
 <p>In order to have <code class="command">git send-email</code> automatically send patches
 to the ffmpeg-devel mailing list, add the following stanza
@@ -453,7 +451,7 @@ to <samp class="file">/path/to/ffmpeg/repository/.git/config</samp>:
 </div>
 </div>
 <div class="chapter-level-extent" id="FFmpeg-specific">
-<h2 class="chapter">4 FFmpeg specific</h2>
+<h2 class="chapter"><span>4 FFmpeg specific<a class="copiable-link" href="#FFmpeg-specific"> &para;</a></span></h2>
 
 <ul class="mini-toc">
 <li><a href="#Reverting-broken-commits" accesskey="1">Reverting broken commits</a></li>
@@ -461,7 +459,7 @@ to <samp class="file">/path/to/ffmpeg/repository/.git/config</samp>:
 <li><a href="#Finding-a-specific-svn-revision" accesskey="3">Finding a specific svn revision</a></li>
 </ul>
 <div class="section-level-extent" id="Reverting-broken-commits">
-<h3 class="section">4.1 Reverting broken commits</h3>
+<h3 class="section"><span>4.1 Reverting broken commits<a class="copiable-link" href="#Reverting-broken-commits"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git reset &lt;commit&gt;
@@ -483,12 +481,11 @@ the current branch history.
 <p>will replay local commits over the main repository allowing to edit, merge
 or remove some of them in the process.
 </p>
-<div class="float">
+<div class="info">
 <p><code class="command">git reset</code>, <code class="command">git commit --amend</code> and <code class="command">git rebase</code>
 rewrite history, so you should use them ONLY on your local or topic branches.
 The main repository will reject those changes.
-</p><div class="type-number-float"><p><strong class="strong">NOTE
-</strong></p></div></div>
+</p></div>
 <div class="example">
 <pre class="example-preformatted">git revert &lt;commit&gt;
 </pre></div>
@@ -498,7 +495,7 @@ faulty commit disappear from the history.
 </p>
 </div>
 <div class="section-level-extent" id="Pushing-changes-to-remote-trees">
-<h3 class="section">4.2 Pushing changes to remote trees</h3>
+<h3 class="section"><span>4.2 Pushing changes to remote trees<a class="copiable-link" href="#Pushing-changes-to-remote-trees"> &para;</a></span></h3>
 
 <div class="example">
 <pre class="example-preformatted">git push origin master --dry-run
@@ -527,7 +524,7 @@ branches matching the local ones.
 </p>
 </div>
 <div class="section-level-extent" id="Finding-a-specific-svn-revision">
-<h3 class="section">4.3 Finding a specific svn revision</h3>
+<h3 class="section"><span>4.3 Finding a specific svn revision<a class="copiable-link" href="#Finding-a-specific-svn-revision"> &para;</a></span></h3>
 
 <p>Since version 1.7.1 Git supports &lsquo;<samp class="samp">:/foo</samp>&rsquo; syntax for specifying commits
 based on a regular expression. see man gitrevisions
@@ -558,7 +555,7 @@ search capabilities is used).
 </div>
 </div>
 <div class="chapter-level-extent" id="gpg-key-generation">
-<h2 class="chapter">5 gpg key generation</h2>
+<h2 class="chapter"><span>5 gpg key generation<a class="copiable-link" href="#gpg-key-generation"> &para;</a></span></h2>
 
 <p>If you have no gpg key yet, we recommend that you create a ed25519 based key as it
 is small, fast and secure. Especially it results in small signatures in git.
@@ -573,7 +570,7 @@ can add it to the MAINTAINER file and upload it to a keyserver.
 </p>
 </div>
 <div class="chapter-level-extent" id="Pre_002dpush-checklist">
-<h2 class="chapter">6 Pre-push checklist</h2>
+<h2 class="chapter"><span>6 Pre-push checklist<a class="copiable-link" href="#Pre_002dpush-checklist"> &para;</a></span></h2>
 
 <p>Once you have a set of commits that you feel are ready for pushing,
 work through the following checklist to doublecheck everything is in
@@ -611,14 +608,15 @@ recommended.
 </p>
 </div>
 <div class="chapter-level-extent" id="Server-Issues">
-<h2 class="chapter">7 Server Issues</h2>
+<h2 class="chapter"><span>7 Server Issues<a class="copiable-link" href="#Server-Issues"> &para;</a></span></h2>
 
 <p>Contact the project admins at <a class="email" href="mailto:root@ffmpeg.org">root@ffmpeg.org</a> if you have technical
 problems with the Git server.
 </p></div>
 </div>
-
-
-
-</body>
+      <p style="font-size: small;">
+        This document was generated using <a class="uref" href="https://www.gnu.org/software/texinfo/"><em class="emph">makeinfo</em></a>.
+      </p>
+    </div>
+  </body>
 </html>

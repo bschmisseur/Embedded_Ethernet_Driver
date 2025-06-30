@@ -1,34 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 7.0.1, https://www.gnu.org/software/texinfo/ -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>FFmpeg Utilities Documentation</title>
-
-<meta name="description" content="FFmpeg Utilities Documentation">
-<meta name="keywords" content="FFmpeg Utilities Documentation">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<style type="text/css">
-<!--
-div.example {margin-left: 3.2em}
-ul.mark-bullet {list-style-type: disc}
-ul.toc-numbered-mark {list-style: none}
--->
-</style>
-
-
-</head>
-
-<body lang="en">
+<!-- Created by , GNU Texinfo 7.1 -->
+  <head>
+    <meta charset="utf-8">
+    <title>
+      FFmpeg Utilities Documentation
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      FFmpeg Utilities Documentation
+      </h1>
 
 
 <div class="top-level-extent" id="SEC_Top">
-
 
 <div class="element-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
@@ -60,8 +49,16 @@ ul.toc-numbered-mark {list-style: none}
 </ul>
 </div>
 </div>
+
+<ul class="mini-toc">
+<li><a href="#Description" accesskey="1">Description</a></li>
+<li><a href="#Syntax" accesskey="2">Syntax</a></li>
+<li><a href="#Expression-Evaluation" accesskey="3">Expression Evaluation</a></li>
+<li><a href="#See-Also" accesskey="4">See Also</a></li>
+<li><a href="#Authors" accesskey="5">Authors</a></li>
+</ul>
 <div class="chapter-level-extent" id="Description">
-<h2 class="chapter">1 Description</h2>
+<h2 class="chapter"><span>1 Description<a class="copiable-link" href="#Description"> &para;</a></span></h2>
 
 <p>This document describes some generic features and utilities provided
 by the libavutil library.
@@ -69,7 +66,7 @@ by the libavutil library.
 
 </div>
 <div class="chapter-level-extent" id="Syntax">
-<h2 class="chapter">2 Syntax</h2>
+<h2 class="chapter"><span>2 Syntax<a class="copiable-link" href="#Syntax"> &para;</a></span></h2>
 
 <p>This section documents the syntax and formats employed by the FFmpeg
 libraries and tools.
@@ -85,7 +82,7 @@ libraries and tools.
 <li><a href="#Channel-Layout" accesskey="8">Channel Layout</a></li>
 </ul>
 <div class="section-level-extent" id="Quoting-and-escaping">
-<h3 class="section">2.1 Quoting and escaping</h3>
+<h3 class="section"><span>2.1 Quoting and escaping<a class="copiable-link" href="#Quoting-and-escaping"> &para;</a></span></h3>
 
 <p>FFmpeg adopts the following quoting and escaping mechanism, unless
 explicitly specified. The following rules are applied:
@@ -121,7 +118,7 @@ to automatically quote or escape a string in a script.
 <li><a href="#Examples" accesskey="1">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Examples">
-<h4 class="subsection">2.1.1 Examples</h4>
+<h4 class="subsection"><span>2.1.1 Examples<a class="copiable-link" href="#Examples"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Escape the string <code class="code">Crime d'Amour</code> containing the <code class="code">'</code> special
@@ -155,7 +152,7 @@ when quoting it:
 <a class="anchor" id="date-syntax"></a></div>
 </div>
 <div class="section-level-extent" id="Date">
-<h3 class="section">2.2 Date</h3>
+<h3 class="section"><span>2.2 Date<a class="copiable-link" href="#Date"> &para;</a></span></h3>
 
 <p>The accepted syntax is:
 </p><div class="example">
@@ -172,7 +169,7 @@ year-month-day.
 </p>
 <a class="anchor" id="time-duration-syntax"></a></div>
 <div class="section-level-extent" id="Time-duration">
-<h3 class="section">2.3 Time duration</h3>
+<h3 class="section"><span>2.3 Time duration<a class="copiable-link" href="#Time-duration"> &para;</a></span></h3>
 
 <p>There are two accepted syntaxes for expressing time duration.
 </p>
@@ -202,7 +199,7 @@ respectively.
 <li><a href="#Examples-1" accesskey="1">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Examples-1">
-<h4 class="subsection">2.3.1 Examples</h4>
+<h4 class="subsection"><span>2.3.1 Examples<a class="copiable-link" href="#Examples-1"> &para;</a></span></h4>
 
 <p>The following examples are all valid time duration:
 </p>
@@ -235,7 +232,7 @@ respectively.
 <a class="anchor" id="video-size-syntax"></a></div>
 </div>
 <div class="section-level-extent" id="Video-size">
-<h3 class="section">2.4 Video size</h3>
+<h3 class="section"><span>2.4 Video size<a class="copiable-link" href="#Video-size"> &para;</a></span></h3>
 <p>Specify the size of the sourced video, it may be a string of the form
 <var class="var">width</var>x<var class="var">height</var>, or the name of a size abbreviation.
 </p>
@@ -404,7 +401,7 @@ respectively.
 
 <a class="anchor" id="video-rate-syntax"></a></div>
 <div class="section-level-extent" id="Video-rate">
-<h3 class="section">2.5 Video rate</h3>
+<h3 class="section"><span>2.5 Video rate<a class="copiable-link" href="#Video-rate"> &para;</a></span></h3>
 
 <p>Specify the frame rate of a video, expressed as the number of frames
 generated per second. It has to be a string in the format
@@ -441,7 +438,7 @@ number or a valid video frame rate abbreviation.
 
 <a class="anchor" id="ratio-syntax"></a></div>
 <div class="section-level-extent" id="Ratio">
-<h3 class="section">2.6 Ratio</h3>
+<h3 class="section"><span>2.6 Ratio<a class="copiable-link" href="#Ratio"> &para;</a></span></h3>
 
 <p>A ratio can be expressed as an expression, or in the form
 <var class="var">numerator</var>:<var class="var">denominator</var>.
@@ -454,7 +451,7 @@ want to exclude those values.
 </p>
 <a class="anchor" id="color-syntax"></a></div>
 <div class="section-level-extent" id="Color">
-<h3 class="section">2.7 Color</h3>
+<h3 class="section"><span>2.7 Color<a class="copiable-link" href="#Color"> &para;</a></span></h3>
 
 <p>It can be the name of a color as defined below (case insensitive match) or a
 <code class="code">[0x|#]RRGGBB[AA]</code> sequence, possibly followed by @ and a string
@@ -894,7 +891,7 @@ component is not specified then &lsquo;<samp class="samp">0xff</samp>&rsquo; is 
 
 <a class="anchor" id="channel-layout-syntax"></a></div>
 <div class="section-level-extent" id="Channel-Layout">
-<h3 class="section">2.8 Channel Layout</h3>
+<h3 class="section"><span>2.8 Channel Layout<a class="copiable-link" href="#Channel-Layout"> &para;</a></span></h3>
 
 <p>A channel layout specifies the spatial disposition of the channels in
 a multi-channel audio stream. To specify a channel layout, FFmpeg
@@ -1031,6 +1028,9 @@ following identifiers:
 <dt>&lsquo;<samp class="samp">6.0(front)</samp>&rsquo;</dt>
 <dd><p>FL+FR+FLC+FRC+SL+SR
 </p></dd>
+<dt>&lsquo;<samp class="samp">3.1.2</samp>&rsquo;</dt>
+<dd><p>FL+FR+FC+LFE+TFL+TFR
+</p></dd>
 <dt>&lsquo;<samp class="samp">hexagonal</samp>&rsquo;</dt>
 <dd><p>FL+FR+FC+BL+BR+BC
 </p></dd>
@@ -1058,7 +1058,7 @@ following identifiers:
 <dt>&lsquo;<samp class="samp">7.1(wide-side)</samp>&rsquo;</dt>
 <dd><p>FL+FR+FC+LFE+FLC+FRC+SL+SR
 </p></dd>
-<dt>&lsquo;<samp class="samp">7.1(top)</samp>&rsquo;</dt>
+<dt>&lsquo;<samp class="samp">5.1.2</samp>&rsquo;</dt>
 <dd><p>FL+FR+FC+LFE+BL+BR+TFL+TFR
 </p></dd>
 <dt>&lsquo;<samp class="samp">octagonal</samp>&rsquo;</dt>
@@ -1066,6 +1066,21 @@ following identifiers:
 </p></dd>
 <dt>&lsquo;<samp class="samp">cube</samp>&rsquo;</dt>
 <dd><p>FL+FR+BL+BR+TFL+TFR+TBL+TBR
+</p></dd>
+<dt>&lsquo;<samp class="samp">5.1.4</samp>&rsquo;</dt>
+<dd><p>FL+FR+FC+LFE+BL+BR+TFL+TFR+TBL+TBR
+</p></dd>
+<dt>&lsquo;<samp class="samp">7.1.2</samp>&rsquo;</dt>
+<dd><p>FL+FR+FC+LFE+BL+BR+SL+SR+TFL+TFR
+</p></dd>
+<dt>&lsquo;<samp class="samp">7.1.4</samp>&rsquo;</dt>
+<dd><p>FL+FR+FC+LFE+BL+BR+SL+SR+TFL+TFR+TBL+TBR
+</p></dd>
+<dt>&lsquo;<samp class="samp">7.2.3</samp>&rsquo;</dt>
+<dd><p>FL+FR+FC+LFE+BL+BR+SL+SR+TFL+TFR+TBC+LFE2
+</p></dd>
+<dt>&lsquo;<samp class="samp">9.1.4</samp>&rsquo;</dt>
+<dd><p>FL+FR+FC+LFE+BL+BR+FLC+FRC+SL+SR+TFL+TFR+TBL+TBR
 </p></dd>
 <dt>&lsquo;<samp class="samp">hexadecagonal</samp>&rsquo;</dt>
 <dd><p>FL+FR+FC+BL+BR+BC+SL+SR+WL+WR+TBL+TBR+TBC+TFC+TFL+TFR
@@ -1116,7 +1131,7 @@ also be specified as a decimal number (if and only if not followed by &quot;c&qu
 </div>
 </div>
 <div class="chapter-level-extent" id="Expression-Evaluation">
-<h2 class="chapter">3 Expression Evaluation</h2>
+<h2 class="chapter"><span>3 Expression Evaluation<a class="copiable-link" href="#Expression-Evaluation"> &para;</a></span></h2>
 
 <p>When evaluating an arithmetic expression, FFmpeg uses an internal
 formula evaluator, implemented through the <samp class="file">libavutil/eval.h</samp>
@@ -1153,7 +1168,7 @@ expression evaluates to the value of <var class="var">expr2</var>.
 <dd><p>Compute arctangent of <var class="var">x</var>.
 </p>
 </dd>
-<dt><samp class="option">atan2(x, y)</samp></dt>
+<dt><samp class="option">atan2(y, x)</samp></dt>
 <dd><p>Compute principal value of the arc tangent of <var class="var">y</var>/<var class="var">x</var>.
 </p>
 </dd>
@@ -1309,9 +1324,16 @@ Returns the value of the expression printed.
 <p>Prints t with loglevel l
 </p>
 </dd>
-<dt><samp class="option">random(x)</samp></dt>
-<dd><p>Return a pseudo random value between 0.0 and 1.0. <var class="var">x</var> is the index of the
-internal variable which will be used to save the seed/state.
+<dt><samp class="option">random(idx)</samp></dt>
+<dd><p>Return a pseudo random value between 0.0 and 1.0. <var class="var">idx</var> is the
+index of the internal variable which will be used to save the
+seed/state.
+</p>
+</dd>
+<dt><samp class="option">randomi(idx, min, max)</samp></dt>
+<dd><p>Return a pseudo random value in the interval between <var class="var">min</var> and
+<var class="var">max</var>. <var class="var">idx</var> is the index of the internal variable which will
+be used to save the seed/state.
 </p>
 </dd>
 <dt><samp class="option">root(expr, max)</samp></dt>
@@ -1509,7 +1531,7 @@ indication of the corresponding powers of 10 and of 2.
 
 </div>
 <div class="chapter-level-extent" id="See-Also">
-<h2 class="chapter">4 See Also</h2>
+<h2 class="chapter"><span>4 See Also<a class="copiable-link" href="#See-Also"> &para;</a></span></h2>
 
 <p><a class="url" href="ffmpeg.html">ffmpeg</a>, <a class="url" href="ffplay.html">ffplay</a>, <a class="url" href="ffprobe.html">ffprobe</a>,
 <a class="url" href="libavutil.html">libavutil</a>
@@ -1517,14 +1539,14 @@ indication of the corresponding powers of 10 and of 2.
 
 </div>
 <div class="chapter-level-extent" id="Authors">
-<h2 class="chapter">5 Authors</h2>
+<h2 class="chapter"><span>5 Authors<a class="copiable-link" href="#Authors"> &para;</a></span></h2>
 
 <p>The FFmpeg developers.
 </p>
 <p>For details about the authorship, see the Git history of the project
-(git://source.ffmpeg.org/ffmpeg), e.g. by typing the command
+(https://git.ffmpeg.org/ffmpeg), e.g. by typing the command
 <code class="command">git log</code> in the FFmpeg source directory, or browsing the
-online repository at <a class="url" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a>.
+online repository at <a class="url" href="https://git.ffmpeg.org/ffmpeg">https://git.ffmpeg.org/ffmpeg</a>.
 </p>
 <p>Maintainers for the specific components are listed in the file
 <samp class="file">MAINTAINERS</samp> in the source code tree.
@@ -1532,8 +1554,9 @@ online repository at <a class="url" href="http://source.ffmpeg.org">http://sourc
 
 </div>
 </div>
-
-
-
-</body>
+      <p style="font-size: small;">
+        This document was generated using <a class="uref" href="https://www.gnu.org/software/texinfo/"><em class="emph">makeinfo</em></a>.
+      </p>
+    </div>
+  </body>
 </html>

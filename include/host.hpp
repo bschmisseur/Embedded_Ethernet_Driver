@@ -20,6 +20,7 @@
 #include "ethernet_driver.hpp"
 #include "ethernet_frame.hpp"
 #include "packet_receiver.hpp"
+#include "ethernet_protocol.hpp"
 
 namespace EthernetDriverSimulation{
     class Host : public PacketReceiver {

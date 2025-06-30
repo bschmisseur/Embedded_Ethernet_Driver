@@ -1,33 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 7.0.1, https://www.gnu.org/software/texinfo/ -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>FFmpeg Bitstream Filters Documentation</title>
-
-<meta name="description" content="FFmpeg Bitstream Filters Documentation">
-<meta name="keywords" content="FFmpeg Bitstream Filters Documentation">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<style type="text/css">
-<!--
-div.example {margin-left: 3.2em}
-ul.toc-numbered-mark {list-style: none}
--->
-</style>
-
-
-</head>
-
-<body lang="en">
+<!-- Created by , GNU Texinfo 7.1 -->
+  <head>
+    <meta charset="utf-8">
+    <title>
+      FFmpeg Bitstream Filters Documentation
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      FFmpeg Bitstream Filters Documentation
+      </h1>
 
 
 <div class="top-level-extent" id="SEC_Top">
-
 
 <div class="element-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
@@ -57,19 +47,19 @@ ul.toc-numbered-mark {list-style: none}
     <li><a id="toc-mjpeg2jpeg" href="#mjpeg2jpeg">2.17 mjpeg2jpeg</a></li>
     <li><a id="toc-mjpegadump" href="#mjpegadump">2.18 mjpegadump</a></li>
     <li><a id="toc-mov2textsub-1" href="#mov2textsub-1">2.19 mov2textsub</a></li>
-    <li><a id="toc-mp3decomp" href="#mp3decomp">2.20 mp3decomp</a></li>
-    <li><a id="toc-mpeg2_005fmetadata" href="#mpeg2_005fmetadata">2.21 mpeg2_metadata</a></li>
-    <li><a id="toc-mpeg4_005funpack_005fbframes" href="#mpeg4_005funpack_005fbframes">2.22 mpeg4_unpack_bframes</a></li>
-    <li><a id="toc-noise" href="#noise">2.23 noise</a>
+    <li><a id="toc-mpeg2_005fmetadata" href="#mpeg2_005fmetadata">2.20 mpeg2_metadata</a></li>
+    <li><a id="toc-mpeg4_005funpack_005fbframes" href="#mpeg4_005funpack_005fbframes">2.21 mpeg4_unpack_bframes</a></li>
+    <li><a id="toc-noise" href="#noise">2.22 noise</a>
     <ul class="toc-numbered-mark">
-      <li><a id="toc-Examples" href="#Examples">2.23.1 Examples</a></li>
+      <li><a id="toc-Examples" href="#Examples">2.22.1 Examples</a></li>
     </ul></li>
-    <li><a id="toc-null" href="#null">2.24 null</a></li>
-    <li><a id="toc-pcm_005frechunk" href="#pcm_005frechunk">2.25 pcm_rechunk</a></li>
-    <li><a id="toc-pgs_005fframe_005fmerge" href="#pgs_005fframe_005fmerge">2.26 pgs_frame_merge</a></li>
-    <li><a id="toc-prores_005fmetadata" href="#prores_005fmetadata">2.27 prores_metadata</a></li>
-    <li><a id="toc-remove_005fextra" href="#remove_005fextra">2.28 remove_extra</a></li>
-    <li><a id="toc-setts" href="#setts">2.29 setts</a></li>
+    <li><a id="toc-null" href="#null">2.23 null</a></li>
+    <li><a id="toc-pcm_005frechunk" href="#pcm_005frechunk">2.24 pcm_rechunk</a></li>
+    <li><a id="toc-pgs_005fframe_005fmerge" href="#pgs_005fframe_005fmerge">2.25 pgs_frame_merge</a></li>
+    <li><a id="toc-prores_005fmetadata" href="#prores_005fmetadata">2.26 prores_metadata</a></li>
+    <li><a id="toc-remove_005fextra" href="#remove_005fextra">2.27 remove_extra</a></li>
+    <li><a id="toc-setts" href="#setts">2.28 setts</a></li>
+    <li><a id="toc-showinfo" href="#showinfo">2.29 showinfo</a></li>
     <li><a id="toc-text2movsub-1" href="#text2movsub-1">2.30 text2movsub</a></li>
     <li><a id="toc-trace_005fheaders" href="#trace_005fheaders">2.31 trace_headers</a></li>
     <li><a id="toc-truehd_005fcore" href="#truehd_005fcore">2.32 truehd_core</a></li>
@@ -83,8 +73,15 @@ ul.toc-numbered-mark {list-style: none}
 </ul>
 </div>
 </div>
+
+<ul class="mini-toc">
+<li><a href="#Description" accesskey="1">Description</a></li>
+<li><a href="#Bitstream-Filters" accesskey="2">Bitstream Filters</a></li>
+<li><a href="#See-Also" accesskey="3">See Also</a></li>
+<li><a href="#Authors" accesskey="4">Authors</a></li>
+</ul>
 <div class="chapter-level-extent" id="Description">
-<h2 class="chapter">1 Description</h2>
+<h2 class="chapter"><span>1 Description<a class="copiable-link" href="#Description"> &para;</a></span></h2>
 
 <p>This document describes the bitstream filters provided by the
 libavcodec library.
@@ -95,7 +92,7 @@ bitstream level modifications without performing decoding.
 
 </div>
 <div class="chapter-level-extent" id="Bitstream-Filters">
-<h2 class="chapter">2 Bitstream Filters</h2>
+<h2 class="chapter"><span>2 Bitstream Filters<a class="copiable-link" href="#Bitstream-Filters"> &para;</a></span></h2>
 
 <p>When you configure your FFmpeg build, all the supported bitstream
 filters are enabled by default. You can list all available ones using
@@ -140,7 +137,6 @@ with their parameters, if any.
 <li><a href="#mjpeg2jpeg">mjpeg2jpeg</a></li>
 <li><a href="#mjpegadump">mjpegadump</a></li>
 <li><a href="#mov2textsub-1">mov2textsub</a></li>
-<li><a href="#mp3decomp">mp3decomp</a></li>
 <li><a href="#mpeg2_005fmetadata">mpeg2_metadata</a></li>
 <li><a href="#mpeg4_005funpack_005fbframes">mpeg4_unpack_bframes</a></li>
 <li><a href="#noise">noise</a></li>
@@ -150,6 +146,7 @@ with their parameters, if any.
 <li><a href="#prores_005fmetadata">prores_metadata</a></li>
 <li><a href="#remove_005fextra">remove_extra</a></li>
 <li><a href="#setts">setts</a></li>
+<li><a href="#showinfo">showinfo</a></li>
 <li><a href="#text2movsub-1">text2movsub</a></li>
 <li><a href="#trace_005fheaders">trace_headers</a></li>
 <li><a href="#truehd_005fcore">truehd_core</a></li>
@@ -159,7 +156,7 @@ with their parameters, if any.
 <li><a href="#vp9_005fraw_005freorder">vp9_raw_reorder</a></li>
 </ul>
 <div class="section-level-extent" id="aac_005fadtstoasc">
-<h3 class="section">2.1 aac_adtstoasc</h3>
+<h3 class="section"><span>2.1 aac_adtstoasc<a class="copiable-link" href="#aac_005fadtstoasc"> &para;</a></span></h3>
 
 <p>Convert MPEG-2/4 AAC ADTS to an MPEG-4 Audio Specific Configuration
 bitstream.
@@ -174,7 +171,7 @@ that it is auto-inserted for MP4A-LATM and MOV/MP4 and related formats.
 </p>
 </div>
 <div class="section-level-extent" id="av1_005fmetadata">
-<h3 class="section">2.2 av1_metadata</h3>
+<h3 class="section"><span>2.2 av1_metadata<a class="copiable-link" href="#av1_005fmetadata"> &para;</a></span></h3>
 
 <p>Modify metadata embedded in an AV1 stream.
 </p>
@@ -244,20 +241,20 @@ has a fixed framerate.  Ignored if <samp class="option">tick_rate</samp> is not 
 
 </div>
 <div class="section-level-extent" id="chomp">
-<h3 class="section">2.3 chomp</h3>
+<h3 class="section"><span>2.3 chomp<a class="copiable-link" href="#chomp"> &para;</a></span></h3>
 
 <p>Remove zero padding at the end of a packet.
 </p>
 </div>
 <div class="section-level-extent" id="dca_005fcore">
-<h3 class="section">2.4 dca_core</h3>
+<h3 class="section"><span>2.4 dca_core<a class="copiable-link" href="#dca_005fcore"> &para;</a></span></h3>
 
 <p>Extract the core from a DCA/DTS stream, dropping extensions such as
 DTS-HD.
 </p>
 </div>
 <div class="section-level-extent" id="dump_005fextra">
-<h3 class="section">2.5 dump_extra</h3>
+<h3 class="section"><span>2.5 dump_extra<a class="copiable-link" href="#dump_005fextra"> &para;</a></span></h3>
 
 <p>Add extradata to the beginning of the filtered packets except when
 said packets already exactly begin with the extradata that is intended
@@ -293,7 +290,7 @@ the header stored in extradata to the key packets:
 
 </div>
 <div class="section-level-extent" id="dv_005ferror_005fmarker">
-<h3 class="section">2.6 dv_error_marker</h3>
+<h3 class="section"><span>2.6 dv_error_marker<a class="copiable-link" href="#dv_005ferror_005fmarker"> &para;</a></span></h3>
 
 <p>Blocks in DV which are marked as damaged are replaced by blocks of the specified color.
 </p>
@@ -333,13 +330,13 @@ error status values.
 
 </div>
 <div class="section-level-extent" id="eac3_005fcore">
-<h3 class="section">2.7 eac3_core</h3>
+<h3 class="section"><span>2.7 eac3_core<a class="copiable-link" href="#eac3_005fcore"> &para;</a></span></h3>
 
 <p>Extract the core from a E-AC-3 stream, dropping extra channels.
 </p>
 </div>
 <div class="section-level-extent" id="extract_005fextradata">
-<h3 class="section">2.8 extract_extradata</h3>
+<h3 class="section"><span>2.8 extract_extradata<a class="copiable-link" href="#extract_005fextradata"> &para;</a></span></h3>
 
 <p>Extract the in-band extradata.
 </p>
@@ -360,7 +357,7 @@ bitstream after extraction.
 
 </div>
 <div class="section-level-extent" id="filter_005funits">
-<h3 class="section">2.9 filter_units</h3>
+<h3 class="section"><span>2.9 filter_units<a class="copiable-link" href="#filter_005funits"> &para;</a></span></h3>
 
 <p>Remove units with types in or not in a given set from the stream.
 </p>
@@ -377,6 +374,13 @@ removed and all others passed through.
 </p></dd>
 </dl>
 
+<p>The types used by pass_types and remove_types correspond to NAL unit types
+(nal_unit_type) in H.264, HEVC and H.266 (see Table 7-1 in the H.264
+and HEVC specifications or Table 5 in the H.266 specification), to
+marker values for JPEG (without 0xFF prefix) and to start codes without
+start code prefix (i.e. the byte following the 0x000001) for MPEG-2.
+For VP8 and VP9, every unit has type zero.
+</p>
 <p>Extradata is unchanged by this transformation, but note that if the stream
 contains inline parameter sets then the output may be unusable if they are
 removed.
@@ -391,9 +395,24 @@ removed.
 <pre class="example-preformatted">ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=remove_types=35|38-40' OUTPUT
 </pre></div>
 
+<p>To remove all user data from a MPEG-2 stream, including Closed Captions:
+</p><div class="example">
+<pre class="example-preformatted">ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=remove_types=178' OUTPUT
+</pre></div>
+
+<p>To remove all SEI from a H264 stream, including Closed Captions:
+</p><div class="example">
+<pre class="example-preformatted">ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=remove_types=6' OUTPUT
+</pre></div>
+
+<p>To remove all prefix and suffix SEI from a HEVC stream, including Closed Captions and dynamic HDR:
+</p><div class="example">
+<pre class="example-preformatted">ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=remove_types=39|40' OUTPUT
+</pre></div>
+
 </div>
 <div class="section-level-extent" id="hapqa_005fextract">
-<h3 class="section">2.10 hapqa_extract</h3>
+<h3 class="section"><span>2.10 hapqa_extract<a class="copiable-link" href="#hapqa_005fextract"> &para;</a></span></h3>
 
 <p>Extract Rgb or Alpha part of an HAPQA file, without recompression, in order to create an HAPQ or an HAPAlphaOnly file.
 </p>
@@ -421,7 +440,7 @@ removed.
 
 </div>
 <div class="section-level-extent" id="h264_005fmetadata">
-<h3 class="section">2.11 h264_metadata</h3>
+<h3 class="section"><span>2.11 h264_metadata<a class="copiable-link" href="#h264_005fmetadata"> &para;</a></span></h3>
 
 <p>Modify metadata embedded in an H.264 stream.
 </p>
@@ -558,7 +577,7 @@ input stream properties.
 
 </div>
 <div class="section-level-extent" id="h264_005fmp4toannexb">
-<h3 class="section">2.12 h264_mp4toannexb</h3>
+<h3 class="section"><span>2.12 h264_mp4toannexb<a class="copiable-link" href="#h264_005fmp4toannexb"> &para;</a></span></h3>
 
 <p>Convert an H.264 bitstream from length prefixed mode to start code
 prefixed mode (as defined in the Annex B of the ITU-T H.264
@@ -579,7 +598,7 @@ format with <code class="command">ffmpeg</code>, you can use the command:
 </p>
 </div>
 <div class="section-level-extent" id="h264_005fredundant_005fpps">
-<h3 class="section">2.13 h264_redundant_pps</h3>
+<h3 class="section"><span>2.13 h264_redundant_pps<a class="copiable-link" href="#h264_005fredundant_005fpps"> &para;</a></span></h3>
 
 <p>This applies a specific fixup to some Blu-ray streams which contain
 redundant PPSs modifying irrelevant parameters of the stream which
@@ -587,7 +606,7 @@ confuse other transformations which require correct extradata.
 </p>
 </div>
 <div class="section-level-extent" id="hevc_005fmetadata">
-<h3 class="section">2.14 hevc_metadata</h3>
+<h3 class="section"><span>2.14 hevc_metadata<a class="copiable-link" href="#hevc_005fmetadata"> &para;</a></span></h3>
 
 <p>Modify metadata embedded in an HEVC stream.
 </p>
@@ -661,7 +680,7 @@ attempt to guess the level from the input stream properties.
 
 </div>
 <div class="section-level-extent" id="hevc_005fmp4toannexb">
-<h3 class="section">2.15 hevc_mp4toannexb</h3>
+<h3 class="section"><span>2.15 hevc_mp4toannexb<a class="copiable-link" href="#hevc_005fmp4toannexb"> &para;</a></span></h3>
 
 <p>Convert an HEVC/H.265 bitstream from length prefixed mode to start code
 prefixed mode (as defined in the Annex B of the ITU-T H.265
@@ -683,7 +702,7 @@ format with <code class="command">ffmpeg</code>, you can use the command:
 </p>
 </div>
 <div class="section-level-extent" id="imxdump">
-<h3 class="section">2.16 imxdump</h3>
+<h3 class="section"><span>2.16 imxdump<a class="copiable-link" href="#imxdump"> &para;</a></span></h3>
 
 <p>Modifies the bitstream to fit in MOV and to be usable by the Final Cut
 Pro decoder. This filter only applies to the mpeg2video codec, and is
@@ -698,7 +717,7 @@ likely not needed for Final Cut Pro 7 and newer with the appropriate
 
 </div>
 <div class="section-level-extent" id="mjpeg2jpeg">
-<h3 class="section">2.17 mjpeg2jpeg</h3>
+<h3 class="section"><span>2.17 mjpeg2jpeg<a class="copiable-link" href="#mjpeg2jpeg"> &para;</a></span></h3>
 
 <p>Convert MJPEG/AVI1 packets to full JPEG/JFIF packets.
 </p>
@@ -737,14 +756,14 @@ ffmpeg -i frame_%d.jpg -c:v copy rotated.avi
 
 </div>
 <div class="section-level-extent" id="mjpegadump">
-<h3 class="section">2.18 mjpegadump</h3>
+<h3 class="section"><span>2.18 mjpegadump<a class="copiable-link" href="#mjpegadump"> &para;</a></span></h3>
 
 <p>Add an MJPEG A header to the bitstream, to enable decoding by
 Quicktime.
 </p>
 <a class="anchor" id="mov2textsub"></a></div>
 <div class="section-level-extent" id="mov2textsub-1">
-<h3 class="section">2.19 mov2textsub</h3>
+<h3 class="section"><span>2.19 mov2textsub<a class="copiable-link" href="#mov2textsub-1"> &para;</a></span></h3>
 
 <p>Extract a representable text file from MOV subtitles, stripping the
 metadata header from each subtitle packet.
@@ -752,14 +771,8 @@ metadata header from each subtitle packet.
 <p>See also the <a class="ref" href="#text2movsub">text2movsub</a> filter.
 </p>
 </div>
-<div class="section-level-extent" id="mp3decomp">
-<h3 class="section">2.20 mp3decomp</h3>
-
-<p>Decompress non-standard compressed MP3 audio headers.
-</p>
-</div>
 <div class="section-level-extent" id="mpeg2_005fmetadata">
-<h3 class="section">2.21 mpeg2_metadata</h3>
+<h3 class="section"><span>2.20 mpeg2_metadata<a class="copiable-link" href="#mpeg2_005fmetadata"> &para;</a></span></h3>
 
 <p>Modify metadata embedded in an MPEG-2 stream.
 </p>
@@ -801,7 +814,7 @@ and tables 6-7, 6-8 and 6-9).
 
 </div>
 <div class="section-level-extent" id="mpeg4_005funpack_005fbframes">
-<h3 class="section">2.22 mpeg4_unpack_bframes</h3>
+<h3 class="section"><span>2.21 mpeg4_unpack_bframes<a class="copiable-link" href="#mpeg4_005funpack_005fbframes"> &para;</a></span></h3>
 
 <p>Unpack DivX-style packed B-frames.
 </p>
@@ -823,7 +836,7 @@ DivX-style packed B-frames using <code class="command">ffmpeg</code>, you can us
 
 </div>
 <div class="section-level-extent" id="noise">
-<h3 class="section">2.23 noise</h3>
+<h3 class="section"><span>2.22 noise<a class="copiable-link" href="#noise"> &para;</a></span></h3>
 
 <p>Damages the contents of packets or simply drops them without damaging the
 container. Can be used for fuzzing or testing error resilience/concealment.
@@ -896,7 +909,7 @@ i.e. <code class="code">dropamount=4</code> is the same as <code class="code">dr
 <li><a href="#Examples" accesskey="1">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Examples">
-<h4 class="subsection">2.23.1 Examples</h4>
+<h4 class="subsection"><span>2.22.1 Examples<a class="copiable-link" href="#Examples"> &para;</a></span></h4>
 <p>Apply modification to every byte but don&rsquo;t drop any packets.
 </p><div class="example">
 <pre class="example-preformatted">ffmpeg -i INPUT -c copy -bsf noise=1 output.mkv
@@ -916,15 +929,15 @@ modify any of the remaining packets.
 </div>
 </div>
 <div class="section-level-extent" id="null">
-<h3 class="section">2.24 null</h3>
+<h3 class="section"><span>2.23 null<a class="copiable-link" href="#null"> &para;</a></span></h3>
 <p>This bitstream filter passes the packets through unchanged.
 </p>
 </div>
 <div class="section-level-extent" id="pcm_005frechunk">
-<h3 class="section">2.25 pcm_rechunk</h3>
+<h3 class="section"><span>2.24 pcm_rechunk<a class="copiable-link" href="#pcm_005frechunk"> &para;</a></span></h3>
 
 <p>Repacketize PCM audio to a fixed number of samples per packet or a fixed packet
-rate per second. This is similar to the <a data-manual="ffmpeg-filters" href="ffmpeg-filters.html#asetnsamples">(ffmpeg-filters)asetnsamples audio
+rate per second. This is similar to the <a data-manual="ffmpeg-filters" href="ffmpeg-filters.html#asetnsamples">asetnsamples audio
 filter</a> but works on audio packets instead of audio frames.
 </p>
 <dl class="table">
@@ -956,7 +969,7 @@ for NTSC frame rate using the <samp class="option">frame_rate</samp> option.
 
 </div>
 <div class="section-level-extent" id="pgs_005fframe_005fmerge">
-<h3 class="section">2.26 pgs_frame_merge</h3>
+<h3 class="section"><span>2.25 pgs_frame_merge<a class="copiable-link" href="#pgs_005fframe_005fmerge"> &para;</a></span></h3>
 
 <p>Merge a sequence of PGS Subtitle segments ending with an &quot;end of display set&quot;
 segment into a single packet.
@@ -966,7 +979,7 @@ segment into a single packet.
 </p>
 </div>
 <div class="section-level-extent" id="prores_005fmetadata">
-<h3 class="section">2.27 prores_metadata</h3>
+<h3 class="section"><span>2.26 prores_metadata<a class="copiable-link" href="#prores_005fmetadata"> &para;</a></span></h3>
 
 <p>Modify color property metadata embedded in prores stream.
 </p>
@@ -1057,7 +1070,7 @@ Available values are:
 
 </div>
 <div class="section-level-extent" id="remove_005fextra">
-<h3 class="section">2.28 remove_extra</h3>
+<h3 class="section"><span>2.27 remove_extra<a class="copiable-link" href="#remove_005fextra"> &para;</a></span></h3>
 
 <p>Remove extradata from packets.
 </p>
@@ -1085,7 +1098,7 @@ Available values are:
 
 </div>
 <div class="section-level-extent" id="setts">
-<h3 class="section">2.29 setts</h3>
+<h3 class="section"><span>2.28 setts<a class="copiable-link" href="#setts"> &para;</a></span></h3>
 <p>Set PTS and DTS in packets.
 </p>
 <p>It accepts the following parameters:
@@ -1194,9 +1207,20 @@ for the current packet
 </p></dd>
 </dl>
 
+<p>For example, to set PTS equal to DTS (not recommended if B-frames are involved):
+</p><div class="example">
+<pre class="example-preformatted">ffmpeg -i INPUT -c:a copy -bsf:a setts=pts=DTS out.mkv
+</pre></div>
+
+</div>
+<div class="section-level-extent" id="showinfo">
+<h3 class="section"><span>2.29 showinfo<a class="copiable-link" href="#showinfo"> &para;</a></span></h3>
+<p>Log basic packet information. Mainly useful for testing, debugging,
+and development.
+</p>
 <a class="anchor" id="text2movsub"></a></div>
 <div class="section-level-extent" id="text2movsub-1">
-<h3 class="section">2.30 text2movsub</h3>
+<h3 class="section"><span>2.30 text2movsub<a class="copiable-link" href="#text2movsub-1"> &para;</a></span></h3>
 
 <p>Convert text subtitles to MOV subtitles (as used by the <code class="code">mov_text</code>
 codec) with metadata headers.
@@ -1205,7 +1229,7 @@ codec) with metadata headers.
 </p>
 </div>
 <div class="section-level-extent" id="trace_005fheaders">
-<h3 class="section">2.31 trace_headers</h3>
+<h3 class="section"><span>2.31 trace_headers<a class="copiable-link" href="#trace_005fheaders"> &para;</a></span></h3>
 
 <p>Log trace output containing all syntax elements in the coded stream
 headers (everything above the level of individual coded blocks).
@@ -1216,13 +1240,13 @@ on the build only a subset of these may be available.
 </p>
 </div>
 <div class="section-level-extent" id="truehd_005fcore">
-<h3 class="section">2.32 truehd_core</h3>
+<h3 class="section"><span>2.32 truehd_core<a class="copiable-link" href="#truehd_005fcore"> &para;</a></span></h3>
 
 <p>Extract the core from a TrueHD stream, dropping ATMOS data.
 </p>
 </div>
 <div class="section-level-extent" id="vp9_005fmetadata">
-<h3 class="section">2.33 vp9_metadata</h3>
+<h3 class="section"><span>2.33 vp9_metadata<a class="copiable-link" href="#vp9_005fmetadata"> &para;</a></span></h3>
 
 <p>Modify metadata embedded in a VP9 stream.
 </p>
@@ -1254,7 +1278,7 @@ imposed by the color space will take precedence over this value.
 
 </div>
 <div class="section-level-extent" id="vp9_005fsuperframe">
-<h3 class="section">2.34 vp9_superframe</h3>
+<h3 class="section"><span>2.34 vp9_superframe<a class="copiable-link" href="#vp9_005fsuperframe"> &para;</a></span></h3>
 
 <p>Merge VP9 invisible (alt-ref) frames back into VP9 superframes. This
 fixes merging of split/segmented VP9 streams where the alt-ref frame
@@ -1262,13 +1286,13 @@ was split from its visible counterpart.
 </p>
 </div>
 <div class="section-level-extent" id="vp9_005fsuperframe_005fsplit">
-<h3 class="section">2.35 vp9_superframe_split</h3>
+<h3 class="section"><span>2.35 vp9_superframe_split<a class="copiable-link" href="#vp9_005fsuperframe_005fsplit"> &para;</a></span></h3>
 
 <p>Split VP9 superframes into single frames.
 </p>
 </div>
 <div class="section-level-extent" id="vp9_005fraw_005freorder">
-<h3 class="section">2.36 vp9_raw_reorder</h3>
+<h3 class="section"><span>2.36 vp9_raw_reorder<a class="copiable-link" href="#vp9_005fraw_005freorder"> &para;</a></span></h3>
 
 <p>Given a VP9 stream with correct timestamps but possibly out of order,
 insert additional show-existing-frame packets to correct the ordering.
@@ -1277,7 +1301,7 @@ insert additional show-existing-frame packets to correct the ordering.
 </div>
 </div>
 <div class="chapter-level-extent" id="See-Also">
-<h2 class="chapter">3 See Also</h2>
+<h2 class="chapter"><span>3 See Also<a class="copiable-link" href="#See-Also"> &para;</a></span></h2>
 
 <p><a class="url" href="ffmpeg.html">ffmpeg</a>, <a class="url" href="ffplay.html">ffplay</a>, <a class="url" href="ffprobe.html">ffprobe</a>,
 <a class="url" href="libavcodec.html">libavcodec</a>
@@ -1285,14 +1309,14 @@ insert additional show-existing-frame packets to correct the ordering.
 
 </div>
 <div class="chapter-level-extent" id="Authors">
-<h2 class="chapter">4 Authors</h2>
+<h2 class="chapter"><span>4 Authors<a class="copiable-link" href="#Authors"> &para;</a></span></h2>
 
 <p>The FFmpeg developers.
 </p>
 <p>For details about the authorship, see the Git history of the project
-(git://source.ffmpeg.org/ffmpeg), e.g. by typing the command
+(https://git.ffmpeg.org/ffmpeg), e.g. by typing the command
 <code class="command">git log</code> in the FFmpeg source directory, or browsing the
-online repository at <a class="url" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a>.
+online repository at <a class="url" href="https://git.ffmpeg.org/ffmpeg">https://git.ffmpeg.org/ffmpeg</a>.
 </p>
 <p>Maintainers for the specific components are listed in the file
 <samp class="file">MAINTAINERS</samp> in the source code tree.
@@ -1300,8 +1324,9 @@ online repository at <a class="url" href="http://source.ffmpeg.org">http://sourc
 
 </div>
 </div>
-
-
-
-</body>
+      <p style="font-size: small;">
+        This document was generated using <a class="uref" href="https://www.gnu.org/software/texinfo/"><em class="emph">makeinfo</em></a>.
+      </p>
+    </div>
+  </body>
 </html>

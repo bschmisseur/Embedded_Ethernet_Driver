@@ -1,35 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 7.0.1, https://www.gnu.org/software/texinfo/ -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>FFmpeg Devices Documentation</title>
-
-<meta name="description" content="FFmpeg Devices Documentation">
-<meta name="keywords" content="FFmpeg Devices Documentation">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<style type="text/css">
-<!--
-div.example {margin-left: 3.2em}
-kbd.key {font-style: normal}
-ul.mark-bullet {list-style-type: disc}
-ul.toc-numbered-mark {list-style: none}
--->
-</style>
-
-
-</head>
-
-<body lang="en">
+<!-- Created by , GNU Texinfo 7.1 -->
+  <head>
+    <meta charset="utf-8">
+    <title>
+      FFmpeg Devices Documentation
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      FFmpeg Devices Documentation
+      </h1>
 
 
 <div class="top-level-extent" id="SEC_Top">
-
 
 <div class="element-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
@@ -190,8 +178,17 @@ ul.toc-numbered-mark {list-style: none}
 </ul>
 </div>
 </div>
+
+<ul class="mini-toc">
+<li><a href="#Description" accesskey="1">Description</a></li>
+<li><a href="#Device-Options" accesskey="2">Device Options</a></li>
+<li><a href="#Input-Devices" accesskey="3">Input Devices</a></li>
+<li><a href="#Output-Devices" accesskey="4">Output Devices</a></li>
+<li><a href="#See-Also" accesskey="5">See Also</a></li>
+<li><a href="#Authors" accesskey="6">Authors</a></li>
+</ul>
 <div class="chapter-level-extent" id="Description">
-<h2 class="chapter">1 Description</h2>
+<h2 class="chapter"><span>1 Description<a class="copiable-link" href="#Description"> &para;</a></span></h2>
 
 <p>This document describes the input and output devices provided by the
 libavdevice library.
@@ -199,7 +196,7 @@ libavdevice library.
 
 </div>
 <div class="chapter-level-extent" id="Device-Options">
-<h2 class="chapter">2 Device Options</h2>
+<h2 class="chapter"><span>2 Device Options<a class="copiable-link" href="#Device-Options"> &para;</a></span></h2>
 
 <p>The libavdevice library provides the same interface as
 libavformat. Namely, an input device is considered like a demuxer, and
@@ -218,7 +215,7 @@ for programmatic use.
 
 </div>
 <div class="chapter-level-extent" id="Input-Devices">
-<h2 class="chapter">3 Input Devices</h2>
+<h2 class="chapter"><span>3 Input Devices<a class="copiable-link" href="#Input-Devices"> &para;</a></span></h2>
 
 <p>Input devices are configured elements in FFmpeg which enable accessing
 the data coming from a multimedia device attached to your system.
@@ -261,7 +258,7 @@ supported input devices.
 <li><a href="#x11grab">x11grab</a></li>
 </ul>
 <div class="section-level-extent" id="alsa">
-<h3 class="section">3.1 alsa</h3>
+<h3 class="section"><span>3.1 alsa<a class="copiable-link" href="#alsa"> &para;</a></span></h3>
 
 <p>ALSA (Advanced Linux Sound Architecture) input device.
 </p>
@@ -298,7 +295,7 @@ card id 0, you may run the command:
 <li><a href="#Options" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options">
-<h4 class="subsection">3.1.1 Options</h4>
+<h4 class="subsection"><span>3.1.1 Options<a class="copiable-link" href="#Options"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">sample_rate</samp></dt>
@@ -314,7 +311,7 @@ card id 0, you may run the command:
 </div>
 </div>
 <div class="section-level-extent" id="android_005fcamera">
-<h3 class="section">3.2 android_camera</h3>
+<h3 class="section"><span>3.2 android_camera<a class="copiable-link" href="#android_005fcamera"> &para;</a></span></h3>
 
 <p>Android camera input device.
 </p>
@@ -336,7 +333,7 @@ camera has index 1.
 <li><a href="#Options-1" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-1">
-<h4 class="subsection">3.2.1 Options</h4>
+<h4 class="subsection"><span>3.2.1 Options<a class="copiable-link" href="#Options-1"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">video_size</samp></dt>
@@ -364,7 +361,7 @@ Android if requested framerate is not available or by default (-1).
 </div>
 </div>
 <div class="section-level-extent" id="avfoundation">
-<h3 class="section">3.3 avfoundation</h3>
+<h3 class="section"><span>3.3 avfoundation<a class="copiable-link" href="#avfoundation"> &para;</a></span></h3>
 
 <p>AVFoundation input device.
 </p>
@@ -408,7 +405,7 @@ This is equivalent to specifying an empty device name or index.
 <li><a href="#Examples" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-2">
-<h4 class="subsection">3.3.1 Options</h4>
+<h4 class="subsection"><span>3.3.1 Options<a class="copiable-link" href="#Options-2"> &para;</a></span></h4>
 
 <p>AVFoundation supports the following options:
 </p>
@@ -460,7 +457,7 @@ Using this option may result in receiving the underlying data delivered to the A
 
 </div>
 <div class="subsection-level-extent" id="Examples">
-<h4 class="subsection">3.3.2 Examples</h4>
+<h4 class="subsection"><span>3.3.2 Examples<a class="copiable-link" href="#Examples"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Print the list of AVFoundation supported devices and exit:
@@ -494,15 +491,16 @@ Using this option may result in receiving the underlying data delivered to the A
 </div>
 </div>
 <div class="section-level-extent" id="bktr">
-<h3 class="section">3.4 bktr</h3>
+<h3 class="section"><span>3.4 bktr<a class="copiable-link" href="#bktr"> &para;</a></span></h3>
 
-<p>BSD video input device.
+<p>BSD video input device. Deprecated and will be removed - please contact
+the developers if you are interested in maintaining it.
 </p>
 <ul class="mini-toc">
 <li><a href="#Options-3" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-3">
-<h4 class="subsection">3.4.1 Options</h4>
+<h4 class="subsection"><span>3.4.1 Options<a class="copiable-link" href="#Options-3"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">framerate</samp></dt>
@@ -531,7 +529,7 @@ Using this option may result in receiving the underlying data delivered to the A
 </div>
 </div>
 <div class="section-level-extent" id="decklink">
-<h3 class="section">3.5 decklink</h3>
+<h3 class="section"><span>3.5 decklink<a class="copiable-link" href="#decklink"> &para;</a></span></h3>
 
 <p>The decklink input device provides capture capabilities for Blackmagic
 DeckLink devices.
@@ -553,7 +551,7 @@ audio track.
 <li><a href="#Examples-1" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-4">
-<h4 class="subsection">3.5.1 Options</h4>
+<h4 class="subsection"><span>3.5.1 Options<a class="copiable-link" href="#Options-4"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">list_devices</samp></dt>
@@ -748,7 +746,7 @@ Defaults to <samp class="option">false</samp>.
 
 </div>
 <div class="subsection-level-extent" id="Examples-1">
-<h4 class="subsection">3.5.2 Examples</h4>
+<h4 class="subsection"><span>3.5.2 Examples<a class="copiable-link" href="#Examples-1"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>List input devices:
@@ -781,7 +779,7 @@ Defaults to <samp class="option">false</samp>.
 </div>
 </div>
 <div class="section-level-extent" id="dshow">
-<h3 class="section">3.6 dshow</h3>
+<h3 class="section"><span>3.6 dshow<a class="copiable-link" href="#dshow"> &para;</a></span></h3>
 
 <p>Windows DirectShow input device.
 </p>
@@ -805,7 +803,7 @@ and <var class="var">NAME</var> is the device&rsquo;s name or alternative name..
 <li><a href="#Examples-2" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-5">
-<h4 class="subsection">3.6.1 Options</h4>
+<h4 class="subsection"><span>3.6.1 Options<a class="copiable-link" href="#Options-5"> &para;</a></span></h4>
 
 <p>If no options are specified, the device&rsquo;s defaults are used.
 If the device does not support the requested options, it will
@@ -970,7 +968,7 @@ provide unreliable timestamps.
 
 </div>
 <div class="subsection-level-extent" id="Examples-2">
-<h4 class="subsection">3.6.2 Examples</h4>
+<h4 class="subsection"><span>3.6.2 Examples<a class="copiable-link" href="#Examples-2"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Print the list of DirectShow supported devices and exit:
@@ -1014,7 +1012,7 @@ provide unreliable timestamps.
 </div>
 </div>
 <div class="section-level-extent" id="fbdev">
-<h3 class="section">3.7 fbdev</h3>
+<h3 class="section"><span>3.7 fbdev<a class="copiable-link" href="#fbdev"> &para;</a></span></h3>
 
 <p>Linux framebuffer input device.
 </p>
@@ -1043,7 +1041,7 @@ Documentation/fb/framebuffer.txt included in the Linux source tree.
 <li><a href="#Options-6" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-6">
-<h4 class="subsection">3.7.1 Options</h4>
+<h4 class="subsection"><span>3.7.1 Options<a class="copiable-link" href="#Options-6"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">framerate</samp></dt>
@@ -1055,13 +1053,13 @@ Documentation/fb/framebuffer.txt included in the Linux source tree.
 </div>
 </div>
 <div class="section-level-extent" id="gdigrab">
-<h3 class="section">3.8 gdigrab</h3>
+<h3 class="section"><span>3.8 gdigrab<a class="copiable-link" href="#gdigrab"> &para;</a></span></h3>
 
 <p>Win32 GDI-based screen capture device.
 </p>
 <p>This device allows you to capture a region of the display on Windows.
 </p>
-<p>There are two options for the input filename:
+<p>Amongst options for the imput filenames are such elements as:
 </p><div class="example">
 <pre class="example-preformatted">desktop
 </pre></div>
@@ -1069,9 +1067,13 @@ Documentation/fb/framebuffer.txt included in the Linux source tree.
 </p><div class="example">
 <pre class="example-preformatted">title=<var class="var">window_title</var>
 </pre></div>
+<p>or
+</p><div class="example">
+<pre class="example-preformatted">hwnd=<var class="var">window_hwnd</var>
+</pre></div>
 
 <p>The first option will capture the entire desktop, or a fixed region of the
-desktop. The second option will instead capture the contents of a single
+desktop. The second and third options will instead capture the contents of a single
 window, regardless of its position on the screen.
 </p>
 <p>For example, to grab the entire desktop using <code class="command">ffmpeg</code>:
@@ -1093,7 +1095,7 @@ window, regardless of its position on the screen.
 <li><a href="#Options-7" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-7">
-<h4 class="subsection">3.8.1 Options</h4>
+<h4 class="subsection"><span>3.8.1 Options<a class="copiable-link" href="#Options-7"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">draw_mouse</samp></dt>
@@ -1143,7 +1145,7 @@ of a single window.
 </div>
 </div>
 <div class="section-level-extent" id="iec61883">
-<h3 class="section">3.9 iec61883</h3>
+<h3 class="section"><span>3.9 iec61883<a class="copiable-link" href="#iec61883"> &para;</a></span></h3>
 
 <p>FireWire DV/HDV input device using libiec61883.
 </p>
@@ -1164,7 +1166,7 @@ to choose the first port connected.
 <li><a href="#Examples-3" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-8">
-<h4 class="subsection">3.9.1 Options</h4>
+<h4 class="subsection"><span>3.9.1 Options<a class="copiable-link" href="#Options-8"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">dvtype</samp></dt>
@@ -1193,7 +1195,7 @@ Look at /sys/bus/firewire/devices to find out the GUIDs.
 
 </div>
 <div class="subsection-level-extent" id="Examples-3">
-<h4 class="subsection">3.9.2 Examples</h4>
+<h4 class="subsection"><span>3.9.2 Examples<a class="copiable-link" href="#Examples-3"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Grab and show the input of a FireWire DV/HDV device.
@@ -1212,7 +1214,7 @@ using a packet buffer of 100000 packets if the source is HDV.
 </div>
 </div>
 <div class="section-level-extent" id="jack">
-<h3 class="section">3.10 jack</h3>
+<h3 class="section"><span>3.10 jack<a class="copiable-link" href="#jack"> &para;</a></span></h3>
 
 <p>JACK input device.
 </p>
@@ -1265,7 +1267,7 @@ $ jack_connect metro:120_bpm ffmpeg:input_1
 <li><a href="#Options-9" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-9">
-<h4 class="subsection">3.10.1 Options</h4>
+<h4 class="subsection"><span>3.10.1 Options<a class="copiable-link" href="#Options-9"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">channels</samp></dt>
@@ -1277,7 +1279,7 @@ $ jack_connect metro:120_bpm ffmpeg:input_1
 </div>
 </div>
 <div class="section-level-extent" id="kmsgrab">
-<h3 class="section">3.11 kmsgrab</h3>
+<h3 class="section"><span>3.11 kmsgrab<a class="copiable-link" href="#kmsgrab"> &para;</a></span></h3>
 
 <p>KMS video input device.
 </p>
@@ -1294,7 +1296,7 @@ DRM object that can be passed to other hardware functions.
 <li><a href="#Examples-4" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-10">
-<h4 class="subsection">3.11.1 Options</h4>
+<h4 class="subsection"><span>3.11.1 Options<a class="copiable-link" href="#Options-10"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">device</samp></dt>
@@ -1335,7 +1337,7 @@ content.  Defaults to <code class="code">30</code>.
 
 </div>
 <div class="subsection-level-extent" id="Examples-4">
-<h4 class="subsection">3.11.2 Examples</h4>
+<h4 class="subsection"><span>3.11.2 Examples<a class="copiable-link" href="#Examples-4"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Capture from the first active plane, download the result to normal frames and encode.
@@ -1362,7 +1364,7 @@ capture and encode the middle quarter of a 1920x1080 plane:
 </div>
 </div>
 <div class="section-level-extent" id="lavfi">
-<h3 class="section">3.12 lavfi</h3>
+<h3 class="section"><span>3.12 lavfi<a class="copiable-link" href="#lavfi"> &para;</a></span></h3>
 
 <p>Libavfilter input virtual device.
 </p>
@@ -1370,16 +1372,15 @@ capture and encode the middle quarter of a 1920x1080 plane:
 filtergraph.
 </p>
 <p>For each filtergraph open output, the input device will create a
-corresponding stream which is mapped to the generated output. Currently
-only video data is supported. The filtergraph is specified through the
-option <samp class="option">graph</samp>.
+corresponding stream which is mapped to the generated output.
+The filtergraph is specified through the option <samp class="option">graph</samp>.
 </p>
 <ul class="mini-toc">
 <li><a href="#Options-11" accesskey="1">Options</a></li>
 <li><a href="#Examples-5" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-11">
-<h4 class="subsection">3.12.1 Options</h4>
+<h4 class="subsection"><span>3.12.1 Options<a class="copiable-link" href="#Options-11"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">graph</samp></dt>
@@ -1416,7 +1417,7 @@ the option <var class="var">graph</var>.
 
 </div>
 <div class="subsection-level-extent" id="Examples-5">
-<h4 class="subsection">3.12.2 Examples</h4>
+<h4 class="subsection"><span>3.12.2 Examples<a class="copiable-link" href="#Examples-5"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Create a color video stream and play it back with <code class="command">ffplay</code>:
@@ -1457,7 +1458,7 @@ back with <code class="command">ffplay</code>:
 </div>
 </div>
 <div class="section-level-extent" id="libcdio">
-<h3 class="section">3.13 libcdio</h3>
+<h3 class="section"><span>3.13 libcdio<a class="copiable-link" href="#libcdio"> &para;</a></span></h3>
 
 <p>Audio-CD input device based on libcdio.
 </p>
@@ -1477,7 +1478,7 @@ you may run the command:
 <li><a href="#Options-12" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-12">
-<h4 class="subsection">3.13.1 Options</h4>
+<h4 class="subsection"><span>3.13.1 Options<a class="copiable-link" href="#Options-12"> &para;</a></span></h4>
 <dl class="table">
 <dt><samp class="option">speed</samp></dt>
 <dd><p>Set drive reading speed. Default value is 0.
@@ -1509,7 +1510,7 @@ paranoia project documentation.
 </div>
 </div>
 <div class="section-level-extent" id="libdc1394">
-<h3 class="section">3.14 libdc1394</h3>
+<h3 class="section"><span>3.14 libdc1394<a class="copiable-link" href="#libdc1394"> &para;</a></span></h3>
 
 <p>IIDC1394 input device, based on libdc1394 and libraw1394.
 </p>
@@ -1519,7 +1520,7 @@ paranoia project documentation.
 <li><a href="#Options-13" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-13">
-<h4 class="subsection">3.14.1 Options</h4>
+<h4 class="subsection"><span>3.14.1 Options<a class="copiable-link" href="#Options-13"> &para;</a></span></h4>
 <dl class="table">
 <dt><samp class="option">framerate</samp></dt>
 <dd><p>Set the frame rate. Default is <code class="code">ntsc</code>, corresponding to a frame
@@ -1539,7 +1540,7 @@ Default is <code class="code">qvga</code>.
 </div>
 </div>
 <div class="section-level-extent" id="openal">
-<h3 class="section">3.15 openal</h3>
+<h3 class="section"><span>3.15 openal<a class="copiable-link" href="#openal"> &para;</a></span></h3>
 
 <p>The OpenAL input device provides audio capture on all systems with a
 working OpenAL 1.1 implementation.
@@ -1587,7 +1588,7 @@ supported devices by using the option <var class="var">list_devices</var>.
 <li><a href="#Examples-6" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-14">
-<h4 class="subsection">3.15.1 Options</h4>
+<h4 class="subsection"><span>3.15.1 Options<a class="copiable-link" href="#Options-14"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">channels</samp></dt>
@@ -1616,7 +1617,7 @@ Defaults to <samp class="option">false</samp>.
 
 </div>
 <div class="subsection-level-extent" id="Examples-6">
-<h4 class="subsection">3.15.2 Examples</h4>
+<h4 class="subsection"><span>3.15.2 Examples<a class="copiable-link" href="#Examples-6"> &para;</a></span></h4>
 
 <p>Print the list of OpenAL supported devices and exit:
 </p><div class="example">
@@ -1644,7 +1645,7 @@ try the latest OpenAL Soft if the above does not work.
 </div>
 </div>
 <div class="section-level-extent" id="oss">
-<h3 class="section">3.16 oss</h3>
+<h3 class="section"><span>3.16 oss<a class="copiable-link" href="#oss"> &para;</a></span></h3>
 
 <p>Open Sound System input device.
 </p>
@@ -1665,7 +1666,7 @@ command:
 <li><a href="#Options-15" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-15">
-<h4 class="subsection">3.16.1 Options</h4>
+<h4 class="subsection"><span>3.16.1 Options<a class="copiable-link" href="#Options-15"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">sample_rate</samp></dt>
@@ -1681,7 +1682,7 @@ command:
 </div>
 </div>
 <div class="section-level-extent" id="pulse">
-<h3 class="section">3.17 pulse</h3>
+<h3 class="section"><span>3.17 pulse<a class="copiable-link" href="#pulse"> &para;</a></span></h3>
 
 <p>PulseAudio input device.
 </p>
@@ -1700,7 +1701,7 @@ the command <code class="command">pactl list sources</code>.
 <li><a href="#Examples-7" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-16">
-<h4 class="subsection">3.17.1 Options</h4>
+<h4 class="subsection"><span>3.17.1 Options<a class="copiable-link" href="#Options-16"> &para;</a></span></h4>
 <dl class="table">
 <dt><samp class="option">server</samp></dt>
 <dd><p>Connect to a specific PulseAudio server, specified by an IP address.
@@ -1742,7 +1743,7 @@ will affect the audio latency. By default it is set to 50 ms amount of data.
 
 </div>
 <div class="subsection-level-extent" id="Examples-7">
-<h4 class="subsection">3.17.2 Examples</h4>
+<h4 class="subsection"><span>3.17.2 Examples<a class="copiable-link" href="#Examples-7"> &para;</a></span></h4>
 <p>Record a stream from default device:
 </p><div class="example">
 <pre class="example-preformatted">ffmpeg -f pulse -i default /tmp/pulse.wav
@@ -1751,7 +1752,7 @@ will affect the audio latency. By default it is set to 50 ms amount of data.
 </div>
 </div>
 <div class="section-level-extent" id="sndio">
-<h3 class="section">3.18 sndio</h3>
+<h3 class="section"><span>3.18 sndio<a class="copiable-link" href="#sndio"> &para;</a></span></h3>
 
 <p>sndio input device.
 </p>
@@ -1772,7 +1773,7 @@ command:
 <li><a href="#Options-17" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-17">
-<h4 class="subsection">3.18.1 Options</h4>
+<h4 class="subsection"><span>3.18.1 Options<a class="copiable-link" href="#Options-17"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">sample_rate</samp></dt>
@@ -1788,7 +1789,7 @@ command:
 </div>
 </div>
 <div class="section-level-extent" id="video4linux2_002c-v4l2">
-<h3 class="section">3.19 video4linux2, v4l2</h3>
+<h3 class="section"><span>3.19 video4linux2, v4l2<a class="copiable-link" href="#video4linux2_002c-v4l2"> &para;</a></span></h3>
 
 <p>Video4Linux2 input video device.
 </p>
@@ -1843,7 +1844,7 @@ frame rate and size as previously set:
 <li><a href="#Options-18" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-18">
-<h4 class="subsection">3.19.1 Options</h4>
+<h4 class="subsection"><span>3.19.1 Options<a class="copiable-link" href="#Options-18"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">standard</samp></dt>
@@ -1937,7 +1938,7 @@ sizes) and exit.
 </div>
 </div>
 <div class="section-level-extent" id="vfwcap">
-<h3 class="section">3.20 vfwcap</h3>
+<h3 class="section"><span>3.20 vfwcap<a class="copiable-link" href="#vfwcap"> &para;</a></span></h3>
 
 <p>VfW (Video for Windows) capture input device.
 </p>
@@ -1949,7 +1950,7 @@ other filename will be interpreted as device number 0.
 <li><a href="#Options-19" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-19">
-<h4 class="subsection">3.20.1 Options</h4>
+<h4 class="subsection"><span>3.20.1 Options<a class="copiable-link" href="#Options-19"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">video_size</samp></dt>
@@ -1966,7 +1967,7 @@ corresponding to a frame rate of <code class="code">30000/1001</code>.
 </div>
 </div>
 <div class="section-level-extent" id="x11grab">
-<h3 class="section">3.21 x11grab</h3>
+<h3 class="section"><span>3.21 x11grab<a class="copiable-link" href="#x11grab"> &para;</a></span></h3>
 
 <p>X11 video input device.
 </p>
@@ -2011,7 +2012,7 @@ the properties of your X11 display (e.g. grep for &quot;name&quot; or
 <li><a href="#Options-20" accesskey="1">Options</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-20">
-<h4 class="subsection">3.21.1 Options</h4>
+<h4 class="subsection"><span>3.21.1 Options<a class="copiable-link" href="#Options-20"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">select_region</samp></dt>
@@ -2107,7 +2108,7 @@ default value for both options is 0.
 </div>
 </div>
 <div class="chapter-level-extent" id="Output-Devices">
-<h2 class="chapter">4 Output Devices</h2>
+<h2 class="chapter"><span>4 Output Devices<a class="copiable-link" href="#Output-Devices"> &para;</a></span></h2>
 
 <p>Output devices are configured elements in FFmpeg that can write
 multimedia data to an output device attached to your system.
@@ -2141,7 +2142,7 @@ enabled output devices.
 <li><a href="#xv">xv</a></li>
 </ul>
 <div class="section-level-extent" id="alsa-1">
-<h3 class="section">4.1 alsa</h3>
+<h3 class="section"><span>4.1 alsa<a class="copiable-link" href="#alsa-1"> &para;</a></span></h3>
 
 <p>ALSA (Advanced Linux Sound Architecture) output device.
 </p>
@@ -2149,7 +2150,7 @@ enabled output devices.
 <li><a href="#Examples-8" accesskey="1">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Examples-8">
-<h4 class="subsection">4.1.1 Examples</h4>
+<h4 class="subsection"><span>4.1.1 Examples<a class="copiable-link" href="#Examples-8"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Play a file on default ALSA device:
@@ -2166,7 +2167,7 @@ enabled output devices.
 </div>
 </div>
 <div class="section-level-extent" id="AudioToolbox">
-<h3 class="section">4.2 AudioToolbox</h3>
+<h3 class="section"><span>4.2 AudioToolbox<a class="copiable-link" href="#AudioToolbox"> &para;</a></span></h3>
 
 <p>AudioToolbox output device.
 </p>
@@ -2188,7 +2189,7 @@ all device names, UIDs and corresponding indices.
 <li><a href="#Examples-9" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-21">
-<h4 class="subsection">4.2.1 Options</h4>
+<h4 class="subsection"><span>4.2.1 Options<a class="copiable-link" href="#Options-21"> &para;</a></span></h4>
 
 <p>AudioToolbox supports the following options:
 </p>
@@ -2201,7 +2202,7 @@ all device names, UIDs and corresponding indices.
 
 </div>
 <div class="subsection-level-extent" id="Examples-9">
-<h4 class="subsection">4.2.2 Examples</h4>
+<h4 class="subsection"><span>4.2.2 Examples<a class="copiable-link" href="#Examples-9"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Print the list of supported devices and output a sine wave to the default device:
@@ -2219,7 +2220,7 @@ all device names, UIDs and corresponding indices.
 </div>
 </div>
 <div class="section-level-extent" id="caca">
-<h3 class="section">4.3 caca</h3>
+<h3 class="section"><span>4.3 caca<a class="copiable-link" href="#caca"> &para;</a></span></h3>
 
 <p>CACA output device.
 </p>
@@ -2239,7 +2240,7 @@ libcaca is a graphics library that outputs text instead of pixels.
 <li><a href="#Examples-10" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-22">
-<h4 class="subsection">4.3.1 Options</h4>
+<h4 class="subsection"><span>4.3.1 Options<a class="copiable-link" href="#Options-22"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">window_title</samp></dt>
@@ -2293,7 +2294,7 @@ The argument must be one of <code class="code">algorithms</code>, <code class="c
 
 </div>
 <div class="subsection-level-extent" id="Examples-10">
-<h4 class="subsection">4.3.2 Examples</h4>
+<h4 class="subsection"><span>4.3.2 Examples<a class="copiable-link" href="#Examples-10"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>The following command shows the <code class="command">ffmpeg</code> output is an
@@ -2316,7 +2317,7 @@ CACA window, forcing its size to 80x25:
 </div>
 </div>
 <div class="section-level-extent" id="decklink-1">
-<h3 class="section">4.4 decklink</h3>
+<h3 class="section"><span>4.4 decklink<a class="copiable-link" href="#decklink-1"> &para;</a></span></h3>
 
 <p>The decklink output device provides playback capabilities for Blackmagic
 DeckLink devices.
@@ -2335,7 +2336,7 @@ device with <code class="command">-list_formats 1</code>. Audio sample rate is a
 <li><a href="#Examples-11" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-23">
-<h4 class="subsection">4.4.1 Options</h4>
+<h4 class="subsection"><span>4.4.1 Options<a class="copiable-link" href="#Options-23"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">list_devices</samp></dt>
@@ -2397,11 +2398,17 @@ Must be &lsquo;<samp class="samp">unset</samp>&rsquo;, &lsquo;<samp class="samp"
 Defaults to <samp class="option">unset</samp>.
 </p>
 </dd>
+<dt><samp class="option">vanc_queue_size</samp></dt>
+<dd><p>Sets maximum output buffer size in bytes for VANC data. If the buffering reaches this value,
+outgoing VANC data will be dropped.
+Defaults to &lsquo;<samp class="samp">1048576</samp>&rsquo;.
+</p>
+</dd>
 </dl>
 
 </div>
 <div class="subsection-level-extent" id="Examples-11">
-<h4 class="subsection">4.4.2 Examples</h4>
+<h4 class="subsection"><span>4.4.2 Examples<a class="copiable-link" href="#Examples-11"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>List output devices:
@@ -2429,7 +2436,7 @@ Defaults to <samp class="option">unset</samp>.
 </div>
 </div>
 <div class="section-level-extent" id="fbdev-1">
-<h3 class="section">4.5 fbdev</h3>
+<h3 class="section"><span>4.5 fbdev<a class="copiable-link" href="#fbdev-1"> &para;</a></span></h3>
 
 <p>Linux framebuffer output device.
 </p>
@@ -2446,7 +2453,7 @@ console. It is accessed through a file device node, usually
 <li><a href="#Examples-12" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-24">
-<h4 class="subsection">4.5.1 Options</h4>
+<h4 class="subsection"><span>4.5.1 Options<a class="copiable-link" href="#Options-24"> &para;</a></span></h4>
 <dl class="table">
 <dt><samp class="option">xoffset</samp></dt>
 <dt><samp class="option">yoffset</samp></dt>
@@ -2456,7 +2463,7 @@ console. It is accessed through a file device node, usually
 
 </div>
 <div class="subsection-level-extent" id="Examples-12">
-<h4 class="subsection">4.5.2 Examples</h4>
+<h4 class="subsection"><span>4.5.2 Examples<a class="copiable-link" href="#Examples-12"> &para;</a></span></h4>
 <p>Play a file on framebuffer device <samp class="file">/dev/fb0</samp>.
 Required pixel format depends on current framebuffer settings.
 </p><div class="example">
@@ -2468,8 +2475,8 @@ Required pixel format depends on current framebuffer settings.
 </div>
 </div>
 <div class="section-level-extent" id="opengl">
-<h3 class="section">4.6 opengl</h3>
-<p>OpenGL output device.
+<h3 class="section"><span>4.6 opengl<a class="copiable-link" href="#opengl"> &para;</a></span></h3>
+<p>OpenGL output device. Deprecated and will be removed.
 </p>
 <p>To enable this output device you need to configure FFmpeg with <code class="code">--enable-opengl</code>.
 </p>
@@ -2488,7 +2495,7 @@ Application is also required to inform a device about current resolution by send
 <li><a href="#Examples-13" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-25">
-<h4 class="subsection">4.6.1 Options</h4>
+<h4 class="subsection"><span>4.6.1 Options<a class="copiable-link" href="#Options-25"> &para;</a></span></h4>
 <dl class="table">
 <dt><samp class="option">background</samp></dt>
 <dd><p>Set background color. Black is a default.
@@ -2511,7 +2518,7 @@ Mostly usable when <samp class="option">no_window</samp> is not set.
 
 </div>
 <div class="subsection-level-extent" id="Examples-13">
-<h4 class="subsection">4.6.2 Examples</h4>
+<h4 class="subsection"><span>4.6.2 Examples<a class="copiable-link" href="#Examples-13"> &para;</a></span></h4>
 <p>Play a file on SDL window using OpenGL rendering:
 </p><div class="example">
 <pre class="example-preformatted">ffmpeg  -i INPUT -f opengl &quot;window title&quot;
@@ -2520,13 +2527,13 @@ Mostly usable when <samp class="option">no_window</samp> is not set.
 </div>
 </div>
 <div class="section-level-extent" id="oss-1">
-<h3 class="section">4.7 oss</h3>
+<h3 class="section"><span>4.7 oss<a class="copiable-link" href="#oss-1"> &para;</a></span></h3>
 
 <p>OSS (Open Sound System) output device.
 </p>
 </div>
 <div class="section-level-extent" id="pulse-1">
-<h3 class="section">4.8 pulse</h3>
+<h3 class="section"><span>4.8 pulse<a class="copiable-link" href="#pulse-1"> &para;</a></span></h3>
 
 <p>PulseAudio output device.
 </p>
@@ -2539,7 +2546,7 @@ Mostly usable when <samp class="option">no_window</samp> is not set.
 <li><a href="#Examples-14" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-26">
-<h4 class="subsection">4.8.1 Options</h4>
+<h4 class="subsection"><span>4.8.1 Options<a class="copiable-link" href="#Options-26"> &para;</a></span></h4>
 <dl class="table">
 <dt><samp class="option">server</samp></dt>
 <dd><p>Connect to a specific PulseAudio server, specified by an IP address.
@@ -2595,7 +2602,7 @@ by the server.
 
 </div>
 <div class="subsection-level-extent" id="Examples-14">
-<h4 class="subsection">4.8.2 Examples</h4>
+<h4 class="subsection"><span>4.8.2 Examples<a class="copiable-link" href="#Examples-14"> &para;</a></span></h4>
 <p>Play a file on default device on default server:
 </p><div class="example">
 <pre class="example-preformatted">ffmpeg  -i INPUT -f pulse &quot;stream name&quot;
@@ -2604,10 +2611,16 @@ by the server.
 </div>
 </div>
 <div class="section-level-extent" id="sdl">
-<h3 class="section">4.9 sdl</h3>
+<h3 class="section"><span>4.9 sdl<a class="copiable-link" href="#sdl"> &para;</a></span></h3>
 
-<p>SDL (Simple DirectMedia Layer) output device.
+<p>SDL (Simple DirectMedia Layer) output device. Deprecated and will be removed.
 </p>
+<p>For monitoring purposes in FFmpeg, pipes and a video player such as ffplay can be used:
+</p>
+<div class="example">
+<pre class="example-preformatted">ffmpeg -i INPUT -f nut -c:v rawvideo - | ffplay -
+</pre></div>
+
 <p>&quot;sdl2&quot; can be used as alias for &quot;sdl&quot;.
 </p>
 <p>This output device allows one to show a video stream in an SDL
@@ -2626,17 +2639,23 @@ when configuring your build.
 <li><a href="#Examples-15" accesskey="3">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-27">
-<h4 class="subsection">4.9.1 Options</h4>
+<h4 class="subsection"><span>4.9.1 Options<a class="copiable-link" href="#Options-27"> &para;</a></span></h4>
 
 <dl class="table">
-<dt><samp class="option">window_title</samp></dt>
-<dd><p>Set the SDL window title, if not specified default to the filename
-specified for the output device.
+<dt><samp class="option">window_borderless</samp></dt>
+<dd><p>Set SDL window border off.
+Default value is 0 (enable window border).
 </p>
 </dd>
-<dt><samp class="option">icon_title</samp></dt>
-<dd><p>Set the name of the iconified SDL window, if not specified it is set
-to the same value of <var class="var">window_title</var>.
+<dt><samp class="option">window_enable_quit</samp></dt>
+<dd><p>Enable quit action (using window button or keyboard key)
+when non-zero value is provided.
+Default value is 1 (enable quit action).
+</p>
+</dd>
+<dt><samp class="option">window_fullscreen</samp></dt>
+<dd><p>Set fullscreen mode when non-zero value is provided.
+Default value is zero.
 </p>
 </dd>
 <dt><samp class="option">window_size</samp></dt>
@@ -2646,26 +2665,20 @@ If not specified it defaults to the size of the input video,
 downscaled according to the aspect ratio.
 </p>
 </dd>
+<dt><samp class="option">window_title</samp></dt>
+<dd><p>Set the SDL window title, if not specified default to the filename
+specified for the output device.
+</p>
+</dd>
 <dt><samp class="option">window_x</samp></dt>
 <dt><samp class="option">window_y</samp></dt>
 <dd><p>Set the position of the window on the screen.
-</p>
-</dd>
-<dt><samp class="option">window_fullscreen</samp></dt>
-<dd><p>Set fullscreen mode when non-zero value is provided.
-Default value is zero.
-</p>
-</dd>
-<dt><samp class="option">window_enable_quit</samp></dt>
-<dd><p>Enable quit action (using window button or keyboard key)
-when non-zero value is provided.
-Default value is 1 (enable quit action)
 </p></dd>
 </dl>
 
 </div>
 <div class="subsection-level-extent" id="Interactive-commands">
-<h4 class="subsection">4.9.2 Interactive commands</h4>
+<h4 class="subsection"><span>4.9.2 Interactive commands<a class="copiable-link" href="#Interactive-commands"> &para;</a></span></h4>
 
 <p>The window created by the device can be controlled through the
 following interactive commands.
@@ -2678,7 +2691,7 @@ following interactive commands.
 
 </div>
 <div class="subsection-level-extent" id="Examples-15">
-<h4 class="subsection">4.9.3 Examples</h4>
+<h4 class="subsection"><span>4.9.3 Examples<a class="copiable-link" href="#Examples-15"> &para;</a></span></h4>
 
 <p>The following command shows the <code class="command">ffmpeg</code> output is an
 SDL window, forcing its size to the qcif format:
@@ -2689,19 +2702,19 @@ SDL window, forcing its size to the qcif format:
 </div>
 </div>
 <div class="section-level-extent" id="sndio-1">
-<h3 class="section">4.10 sndio</h3>
+<h3 class="section"><span>4.10 sndio<a class="copiable-link" href="#sndio-1"> &para;</a></span></h3>
 
 <p>sndio audio output device.
 </p>
 </div>
 <div class="section-level-extent" id="v4l2">
-<h3 class="section">4.11 v4l2</h3>
+<h3 class="section"><span>4.11 v4l2<a class="copiable-link" href="#v4l2"> &para;</a></span></h3>
 
 <p>Video4Linux2 output device.
 </p>
 </div>
 <div class="section-level-extent" id="xv">
-<h3 class="section">4.12 xv</h3>
+<h3 class="section"><span>4.12 xv<a class="copiable-link" href="#xv"> &para;</a></span></h3>
 
 <p>XV (XVideo) output device.
 </p>
@@ -2713,7 +2726,7 @@ window.
 <li><a href="#Examples-16" accesskey="2">Examples</a></li>
 </ul>
 <div class="subsection-level-extent" id="Options-28">
-<h4 class="subsection">4.12.1 Options</h4>
+<h4 class="subsection"><span>4.12.1 Options<a class="copiable-link" href="#Options-28"> &para;</a></span></h4>
 
 <dl class="table">
 <dt><samp class="option">display_name</samp></dt>
@@ -2768,7 +2781,7 @@ specified for the output device. Ignored when <var class="var">window_id</var> i
 </p>
 </div>
 <div class="subsection-level-extent" id="Examples-16">
-<h4 class="subsection">4.12.2 Examples</h4>
+<h4 class="subsection"><span>4.12.2 Examples<a class="copiable-link" href="#Examples-16"> &para;</a></span></h4>
 
 <ul class="itemize mark-bullet">
 <li>Decode, display and encode video input with <code class="command">ffmpeg</code> at the
@@ -2788,7 +2801,7 @@ same time:
 </div>
 </div>
 <div class="chapter-level-extent" id="See-Also">
-<h2 class="chapter">5 See Also</h2>
+<h2 class="chapter"><span>5 See Also<a class="copiable-link" href="#See-Also"> &para;</a></span></h2>
 
 <p><a class="url" href="ffmpeg.html">ffmpeg</a>, <a class="url" href="ffplay.html">ffplay</a>, <a class="url" href="ffprobe.html">ffprobe</a>,
 <a class="url" href="libavdevice.html">libavdevice</a>
@@ -2796,14 +2809,14 @@ same time:
 
 </div>
 <div class="chapter-level-extent" id="Authors">
-<h2 class="chapter">6 Authors</h2>
+<h2 class="chapter"><span>6 Authors<a class="copiable-link" href="#Authors"> &para;</a></span></h2>
 
 <p>The FFmpeg developers.
 </p>
 <p>For details about the authorship, see the Git history of the project
-(git://source.ffmpeg.org/ffmpeg), e.g. by typing the command
+(https://git.ffmpeg.org/ffmpeg), e.g. by typing the command
 <code class="command">git log</code> in the FFmpeg source directory, or browsing the
-online repository at <a class="url" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a>.
+online repository at <a class="url" href="https://git.ffmpeg.org/ffmpeg">https://git.ffmpeg.org/ffmpeg</a>.
 </p>
 <p>Maintainers for the specific components are listed in the file
 <samp class="file">MAINTAINERS</samp> in the source code tree.
@@ -2811,8 +2824,9 @@ online repository at <a class="url" href="http://source.ffmpeg.org">http://sourc
 
 </div>
 </div>
-
-
-
-</body>
+      <p style="font-size: small;">
+        This document was generated using <a class="uref" href="https://www.gnu.org/software/texinfo/"><em class="emph">makeinfo</em></a>.
+      </p>
+    </div>
+  </body>
 </html>

@@ -134,7 +134,7 @@ namespace EthernetDriverSimulation {
         return ErrorCode::SUCCESS;
     }
 
-    const std::vector<uint8_t> Host::convertEnumToBytes(ExpectedPayloadData data) {
+    const std::vector<uint8_t> EmbeddedDevice::convertEnumToBytes(ExpectedPayloadData data) {
         uint32_t rawData = static_cast<uint32_t>(data);
         std::vector<uint8_t> bytes = {
                                         static_cast<uint8_t>((rawData >> 0) & 0xFF),
@@ -143,5 +143,13 @@ namespace EthernetDriverSimulation {
                                         static_cast<uint8_t>((rawData >> 24) & 0xFF)};
 
         const std::vector<uint8_t>& refBytes = bytes;
+    }
+
+    void EmbeddedDevice::clearRxBuffer() {
+        rxBuffer.clear();
+    }
+
+    void EmbeddedDevice::setDestinationAddress(uint32_t address) {
+        destinationAddress = address;
     }
 }

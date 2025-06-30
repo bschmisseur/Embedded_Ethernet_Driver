@@ -21,6 +21,7 @@
 #include "ethernet_driver.hpp"
 #include "ethernet_frame.hpp"
 #include "packet_receiver.hpp"
+#include "ethernet_protocol.hpp"
 
 // Declare namespace
 namespace EthernetDriverSimulation

@@ -1,34 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 7.0.1, https://www.gnu.org/software/texinfo/ -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>NUT</title>
-
-<meta name="description" content="NUT">
-<meta name="keywords" content="NUT">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<style type="text/css">
-<!--
-div.example {margin-left: 3.2em}
-ul.toc-numbered-mark {list-style: none}
--->
-</style>
-
-
-</head>
-
-<body lang="en">
+<!-- Created by , GNU Texinfo 7.1 -->
+  <head>
+    <meta charset="utf-8">
+    <title>
+      NUT
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      NUT
+      </h1>
 
 
 
 <div class="top-level-extent" id="SEC_Top">
-
 
 <div class="element-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
@@ -53,8 +43,14 @@ ul.toc-numbered-mark {list-style: none}
 </ul>
 </div>
 </div>
+
+<ul class="mini-toc">
+<li><a href="#Description" accesskey="1">Description</a></li>
+<li><a href="#Modes" accesskey="2">Modes</a></li>
+<li><a href="#Container_002dspecific-codec-tags" accesskey="3">Container-specific codec tags</a></li>
+</ul>
 <div class="chapter-level-extent" id="Description">
-<h2 class="chapter">1 Description</h2>
+<h2 class="chapter"><span>1 Description<a class="copiable-link" href="#Description"> &para;</a></span></h2>
 <p>NUT is a low overhead generic container format. It stores audio, video,
 subtitle and user-defined streams in a simple, yet efficient, way.
 </p>
@@ -67,7 +63,7 @@ the official specification shall prevail.
 </p>
 </div>
 <div class="chapter-level-extent" id="Modes">
-<h2 class="chapter">2 Modes</h2>
+<h2 class="chapter"><span>2 Modes<a class="copiable-link" href="#Modes"> &para;</a></span></h2>
 <p>NUT has some variants signaled by using the flags field in its main header.
 </p>
 <table class="multitable">
@@ -81,7 +77,7 @@ the official specification shall prevail.
 <li><a href="#PIPE" accesskey="2">PIPE</a></li>
 </ul>
 <div class="section-level-extent" id="BROADCAST">
-<h3 class="section">2.1 BROADCAST</h3>
+<h3 class="section"><span>2.1 BROADCAST<a class="copiable-link" href="#BROADCAST"> &para;</a></span></h3>
 
 <p>The BROADCAST variant provides a secondary time reference to facilitate
 detecting endpoint latency and network delays.
@@ -90,7 +86,7 @@ To be used in real-time scenarios.
 </p>
 </div>
 <div class="section-level-extent" id="PIPE">
-<h3 class="section">2.2 PIPE</h3>
+<h3 class="section"><span>2.2 PIPE<a class="copiable-link" href="#PIPE"> &para;</a></span></h3>
 
 <p>The PIPE variant assumes NUT is used as non-seekable intermediate container,
 by not using syncpoint removes unneeded overhead and reduces the overall
@@ -99,7 +95,7 @@ memory usage.
 </div>
 </div>
 <div class="chapter-level-extent" id="Container_002dspecific-codec-tags">
-<h2 class="chapter">3 Container-specific codec tags</h2>
+<h2 class="chapter"><span>3 Container-specific codec tags<a class="copiable-link" href="#Container_002dspecific-codec-tags"> &para;</a></span></h2>
 
 <ul class="mini-toc">
 <li><a href="#Generic-raw-YUVA-formats" accesskey="1">Generic raw YUVA formats</a></li>
@@ -109,7 +105,7 @@ memory usage.
 <li><a href="#Codecs" accesskey="5">Codecs</a></li>
 </ul>
 <div class="section-level-extent" id="Generic-raw-YUVA-formats">
-<h3 class="section">3.1 Generic raw YUVA formats</h3>
+<h3 class="section"><span>3.1 Generic raw YUVA formats<a class="copiable-link" href="#Generic-raw-YUVA-formats"> &para;</a></span></h3>
 
 <p>Since many exotic planar YUVA pixel formats are not considered by
 the AVI/QuickTime FourCC lists, the following scheme is adopted for
@@ -132,7 +128,7 @@ to be read big-endian.
 </p>
 </div>
 <div class="section-level-extent" id="Raw-Audio">
-<h3 class="section">3.2 Raw Audio</h3>
+<h3 class="section"><span>3.2 Raw Audio<a class="copiable-link" href="#Raw-Audio"> &para;</a></span></h3>
 
 <table class="multitable">
 <tbody><tr><td width="40%">ALAW</td><td width="40%">A-LAW</td></tr>
@@ -152,7 +148,7 @@ to be read big-endian.
 
 </div>
 <div class="section-level-extent" id="Subtitles">
-<h3 class="section">3.3 Subtitles</h3>
+<h3 class="section"><span>3.3 Subtitles<a class="copiable-link" href="#Subtitles"> &para;</a></span></h3>
 
 <table class="multitable">
 <tbody><tr><td width="40%">UTF8</td><td width="40%">Raw UTF-8</td></tr>
@@ -164,7 +160,7 @@ to be read big-endian.
 
 </div>
 <div class="section-level-extent" id="Raw-Data">
-<h3 class="section">3.4 Raw Data</h3>
+<h3 class="section"><span>3.4 Raw Data<a class="copiable-link" href="#Raw-Data"> &para;</a></span></h3>
 
 <table class="multitable">
 <tbody><tr><td width="40%">UTF8</td><td width="40%">Raw UTF-8</td></tr>
@@ -173,7 +169,7 @@ to be read big-endian.
 
 </div>
 <div class="section-level-extent" id="Codecs">
-<h3 class="section">3.5 Codecs</h3>
+<h3 class="section"><span>3.5 Codecs<a class="copiable-link" href="#Codecs"> &para;</a></span></h3>
 
 <table class="multitable">
 <tbody><tr><td width="40%">3IV1</td><td width="40%">non-compliant MPEG-4 generated by old 3ivx</td></tr>
@@ -237,8 +233,9 @@ to be read big-endian.
 </div>
 </div>
 </div>
-
-
-
-</body>
+      <p style="font-size: small;">
+        This document was generated using <a class="uref" href="https://www.gnu.org/software/texinfo/"><em class="emph">makeinfo</em></a>.
+      </p>
+    </div>
+  </body>
 </html>
