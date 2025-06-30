@@ -14,3 +14,10 @@
 |07:45 PM-08:23 PM | 00:38 | RESEARCH | Create POC for video H264 codex using ffmpeg cli
 |08:23 PM-08:43 PM | 00:38 | PROJECT | Made Environment Changes
 |10:50 PM:11:38 PM | 00:48 | PROJECT | Created README file
+
+**Date: 06/29/2025**
+
+| START - FINISH TIME | TOTAL TIME | TASK TYPE | DESCRIPTION
+| :--------: | :-------: | -------- | -------------- |
+|08:10 AM-04:00 PM | 07:50 | PROJECT | Integration of components
+|07:00 PM-10:00 PM | 03:00 | PROJECT | Documenting, cleaning up, and debugging

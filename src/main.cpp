@@ -88,6 +88,22 @@ void performInjectedError(Host& host, EmbeddedDevice& device, EthernetDriver& dr
 void performVideoCapture(Host& host, EmbeddedDevice& device, EthernetDriver& driver) {
     std::cout << "\n--- Video Capture Request ---\n";
 
+    // Call upon host to send video request
+    host.requestVideo();
+
+    // Call upon ethernet driver to send frames
+    // TODO Frame -> Frames
+    driver.processStoredFrame();
+    
+    // Call upon device to read frames
+    device.processReceivedFrames();
+    
+    // Call upon ethernet driver to send frames
+    driver.processStoredFrame();
+
+    // Call upon host to read frames
+    host.processReceivedFrames();
+
     std::cout << "\n--- Ending Video Capture Request ---\n";
 
 }
