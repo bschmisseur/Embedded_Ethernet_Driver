@@ -16,6 +16,12 @@
 
 namespace EthernetDriverSimulation{
 
+    EthernetDriver::EthernetDriver() {}
+
+    void EthernetDriver::registerReceiver(uint32_t address, PacketReceiver* receiver) {
+        addressToReceiverMap[address] = receiver;
+    }
+
     ErrorCode EthernetDriver::storeSerializedFrame(const uint8_t *frameData){
 
         // Ensure the buffer is not to full 
@@ -49,10 +55,11 @@ namespace EthernetDriverSimulation{
             destinationMemoryAddress |= (static_cast<uint32_t>(frame[i]) << (8 * i));
         }
 
-        // Convert address to pointer
-        uint8_t* destBuffer = reinterpret_cast<uint8_t*>(destinationMemoryAddress);
+        // Find destination object
+        auto destObject = addressToReceiverMap.find(destinationMemoryAddress);
 
-        // Copy the packet to the destination bugger
-        std::memcpy(destBuffer, frame.data(), EthernetFrame::MAX_FRAME_SIZE);
+        if (destObject != addressToReceiverMap.end()) {
+            destObject->second->receiveFrame(frame.data(), frame.size());
+        } 
     }
 }

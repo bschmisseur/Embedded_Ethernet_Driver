@@ -13,6 +13,9 @@
 // Standard Includes
 #include <string>
 
+// Project includes
+#include "error_code.hpp"
+
 // Declare namespace
 namespace EthernetDriverSimulation
 {
@@ -22,11 +25,11 @@ namespace EthernetDriverSimulation
              * @defgroup Public Function declarations
              * @{
              */
-            VideoCodec();
-            ~VideoCodec();
+            VideoCodec() = default;
+            ~VideoCodec() = default;
 
-            std::string encodeGifToH264(const std::string& gifPath);
-            std::string decodeH264ToGit(const std::string& h264Path);
+            ErrorCode encodeGifToH264(const std::string& gifPath, const std::string& h264Path);
+            ErrorCode decodeH264ToGif(const std::string& h264Path, const std::string& gifPath);
             /**
              * @}
              */

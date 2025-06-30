@@ -12,33 +12,78 @@
 
 // Standard Includes
 #include <string>
+#include <array>
+#include <vector>
+#include <cstdint>
 
 // Project Includes
 #include "error_code.hpp"
+#include "ethernet_driver.hpp"
+#include "ethernet_frame.hpp"
+#include "packet_receiver.hpp"
 
 // Declare namespace
 namespace EthernetDriverSimulation
 {
-    class EmbeddedDevice {
+    class EmbeddedDevice : public PacketReceiver {
         public:
+            
+            /**
+             * @defgroup Public constant declarations
+             * @{
+             */
+            static constexpr size_t RX_BUFFER_SIZE = 8192;
+            static constexpr size_t MAX_PACKETS = RX_BUFFER_SIZE / EthernetFrame::MAX_FRAME_SIZE;
+            /**
+             * @}
+             */
+
             /**
              * @defgroup Public Function declarations
              * @{
              */
-            EmbeddedDevice();
-            ~EmbeddedDevice();
+            EmbeddedDevice(EthernetDriver* driver, uint32_t address);
+            ~EmbeddedDevice() = default;
 
-            ErrorCode performHandshakeRequest( void );
-            ErrorCode sendVideoCapture( void );
+            void clearRxBuffer();
+            void receiveFrame(const uint8_t *data, size_t size) override;
+            void sendFrame(const std::vector<uint8_t>& payload);
+            void setDestinationAddress(uint32_t address);
+
+            ErrorCode processReceivedFrames();
+
             /**
              * @}
              */
         private:
+        
             /**
              * @defgroup Private constant definitions
              * @{
              */
-            const std::string VIDEO_FILE_PATH = "../data/embedded_video_capture.gif";
+            const std::string ORIGINAL_VIDEO_FILE_PATH = "../data/original.gif";
+            const std::string ENCODED_ON_DEVICE_VIDEO_FILE_PATH = "../output/encode_on_device.mp4";
+            /**
+             * @}
+             */
+
+            /**
+             * @defgroup Private variable declarations
+             * @{
+             */
+            EthernetDriver* driver;
+            uint32_t address;
+            std::vector<std::array<uint8_t, EthernetFrame::MAX_FRAME_SIZE>> rxBuffer;
+            uint32_t destinationAddress;
+            /**
+             * @}
+             */
+
+            /**
+             * @defgroup Private Function declarations
+             * @{
+             */
+            const std::vector<uint8_t> convertEnumToBytes(ExpectedPayloadData data);
             /**
              * @}
              */
